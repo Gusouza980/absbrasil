@@ -7,7 +7,7 @@
         <a class="asi" target="_blank" rel="noopener" title="Navegar para ASI" href="https://www.asi.info/"><img src="{{asset('site/img/logoASI.png')}}" width="115" height="115"  alt="Logomarca ASI"></a>
         <!--<h1>'.PAGINA_TITULO.'</h1>-->
         <h1 id="_desktoptext">Associação Brasileira<br>de Sommeliers - Brasil</h1>
-        <h1 id="_mobiletext">Associação Brasileira<br>de Sommeliers Brasil</h1>
+        <h1 id="_mobiletext">Associação Brasileira de Sommeliers Brasil</h1>
         <nav class="sobe">
             <div class="menuLateral">
                 <button class="menu ativo" title="Menu"><img width="18" height="12" src="{{asset('site/img/ico_menu.svg')}}" alt="Menu"></button>
