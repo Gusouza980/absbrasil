@@ -168,6 +168,15 @@ class SiteController extends Controller
         return view("site.noticia", ["noticia" => $noticia]);
     }
 
+	
+    public function inscricao(){
+        return view("site.inscricao");
+    }
+    public function inscricao_pagamento(){
+        return view("site.inscricao_pagamento");
+    }
+
+
     public function recuperar_senha(){
         return view("site.recuperar_senha");
     }
