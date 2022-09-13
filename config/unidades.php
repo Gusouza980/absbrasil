@@ -26,10 +26,10 @@ return [
             "nome" => "ABS - São Paulo",
             "email" => "abs-sp@abs-sp.com.br",
         ],
-		6 =>{
+		6 => [
 			"nome" => "ABS - Minas Gerais",
 			"email" => "abs@abs-minas.com.br"
-		}
+		]
     ]
 ]
 
