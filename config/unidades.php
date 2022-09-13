@@ -4,11 +4,11 @@ return [
     "inscricoes" => [
         0 => [
             "nome" => "ABS - Pernambuco",
-            "email" => "hbg67@uol.com.br",
+            "email" => "absnordeste.pe@gmail.com",
         ],
         1 => [
             "nome" => "ABS - Rio de Janeiro",
-            "email" => "joseph.morgan@abs-rio.com.br",
+            "email" => "balcao@abs-rio.com.br",
         ],
         2 => [
             "nome" => "ABS - Rio Grande do Sul",
@@ -16,7 +16,7 @@ return [
         ],
         3 => [
             "nome" => "ABS - Santa Catarina",
-            "email" => "rossela.ceni@gmail.com",
+            "email" => "abs.santacatarina@gmail.com",
         ],
         4 => [
             "nome" => "ABS - Goiânia",
@@ -24,7 +24,7 @@ return [
         ],
         5 => [
             "nome" => "ABS - São Paulo",
-            "email" => "borges.jl@gmail.com",
+            "email" => "abs-sp@abs-sp.com.br",
         ],
     ]
 ]
