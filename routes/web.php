@@ -50,6 +50,10 @@ Route::post('/carrinho/finalizar/credito/cielo', [\App\Http\Controllers\CieloCon
 Route::get('/carrinho/finalizar/boleto/gerencianet/{parcelas}', [\App\Http\Controllers\GerencianetController::class, 'boleto'])->name("site.carrinho.finalizar.boleto.gerencianet");
 
 
+Route::get('/inscricao', [\App\Http\Controllers\SiteController::class, 'inscricao'])->name("site.inscricao");
+Route::get('/inscricao/pagamento', [\App\Http\Controllers\SiteController::class, 'inscricao_pagamento'])->name("site.inscricao_pagamento");
+
+
 Route::get('/minha-conta', [\App\Http\Controllers\SiteController::class, 'minhaConta'])->name("site.minha-conta");
 Route::post('/aluno/cadastrar', [\App\Http\Controllers\AlunosController::class, 'cadastrar'])->name("site.aluno.cadastrar");
 Route::post('/aluno/logar', [\App\Http\Controllers\AlunosController::class, 'logar'])->name("site.aluno.logar");
