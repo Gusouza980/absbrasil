@@ -12,6 +12,7 @@ use App\Models\Visitas;
 use App\Models\DestaqueSuspenso;
 use App\Models\Curso;
 use App\Models\Aluno;
+use App\Classes\Email;
 
 class SiteController extends Controller
 {
@@ -172,6 +173,15 @@ class SiteController extends Controller
     public function inscricao(){
         return view("site.inscricao");
     }
+
+    public function inscricao_efetuar(Request $request){
+        $nome = $request->nome;
+        $email = $request->email;
+        $mensagem = "<b>Inscrição para Concurso</b><br><br><b>Nome: </b>$nome<br><b>Email: </b>$email<br><b>Unidade: </b>" . config("unidades.inscricoes")[$request->abs]["nome"] . "<br><b>Momento da Inscrição: </b>" . date("d/m/Y H:i:s");
+        Email::enviar($mensagem, "Inscrição em Concurso", config("unidades.inscricoes")[$request->abs]["email"], false);
+        return redirect()->route("site.inscricao_pagamento");
+    }
+
     public function inscricao_pagamento(){
         return view("site.inscricao_pagamento");
     }

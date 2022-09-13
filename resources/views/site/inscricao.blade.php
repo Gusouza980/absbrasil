@@ -11,7 +11,7 @@
                 <h3 class="mt-4">Formulário de inscrição para o Concurso Brasileiro de Sommeliers – Edição 2022</h3>
 
 
-                <form action="">
+                <form action="{{ route('site.inscricao.efetuar') }}" method="POST">
                     @csrf
 
                     <span>Nome Completo:</span>
@@ -25,10 +25,11 @@
 
 
                     <span>Em qual ABS você deseja realizar a prova prática?</span>
-                    <select name="abs" required id="abs" class="form-control">
-                        <option value="-1">Selecione uma opção...</option>
-                        <option value="0">ABS Brasil</option>
-
+                    <select name="abs" required id="abs" class="form-control" required>
+                        <option value="">Selecione uma opção...</option>
+                        @foreach(config("unidades.inscricoes") as $key => $unidade)
+                            <option value="{{ $key }}">{{ $unidade["nome"] }}</option>
+                        @endforeach
                     </select>
 
                     {{-- REDIRECIONAR PARA A PÁGINA DE PAGAMENTO!!! --}}

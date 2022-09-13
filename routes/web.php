@@ -51,6 +51,7 @@ Route::get('/carrinho/finalizar/boleto/gerencianet/{parcelas}', [\App\Http\Contr
 
 
 Route::get('/inscricao', [\App\Http\Controllers\SiteController::class, 'inscricao'])->name("site.inscricao");
+Route::post('/inscricao/efetuar', [\App\Http\Controllers\SiteController::class, 'inscricao_efetuar'])->name("site.inscricao.efetuar");
 Route::get('/inscricao/pagamento', [\App\Http\Controllers\SiteController::class, 'inscricao_pagamento'])->name("site.inscricao_pagamento");
 
 
