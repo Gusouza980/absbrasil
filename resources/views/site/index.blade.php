@@ -156,6 +156,7 @@
                                     <a href="{{route('site.noticia', ['categoria' => $destaques[2]->categoria->slug, 'noticia' => $destaques[2]->slug])}}">
                                         <img width="370" height="191" src="{{asset($destaques[2]->preview)}}"
                                             alt="Ilustra Blog 1">
+
                                         <p class="info">
                                             <img width="18" height="19" src="{{ asset('site/img/ico_calendar.svg') }}"
                                                 alt="Icone calendário">{{date("d/m/y", strtotime($destaques[2]->publicacao))}}
@@ -163,11 +164,11 @@
                                     </a>
                                     <a class="tag" href="{{route('site.noticias', ['slug' => $destaques[2]->categoria->slug])}}">{{$destaques[2]->categoria->nome}}</a>
                                     <h3><a href="{{route('site.noticia', ['categoria' => $destaques[2]->categoria->slug, 'noticia' => $destaques[2]->slug])}}" class="blogItem">{{$destaques[2]->titulo}}</a></h3>
-                                    <p class="texto">
+                                    <!-- <p class="texto">
                                         <a href="{{route('site.noticia', ['categoria' => $destaques[2]->categoria->slug, 'noticia' => $destaques[2]->slug])}}">
                                             {{$destaques[2]->resumo}}
                                         </a>
-                                    </p>
+                                    </p> -->
                                 </div>
                             @endif
                             @if(isset($destaques[3]))
@@ -182,11 +183,11 @@
                                     </a>
                                     <a class="tag" href="{{route('site.noticias', ['slug' => $destaques[3]->categoria->slug])}}">{{$destaques[3]->categoria->nome}}</a>
                                     <h3><a href="{{route('site.noticia', ['categoria' => $destaques[3]->categoria->slug, 'noticia' => $destaques[3]->slug])}}" class="blogItem">{{$destaques[3]->titulo}}</a></h3>
-                                    <p class="texto">
+                                    <!-- <p class="texto">
                                         <a href="{{route('site.noticia', ['categoria' => $destaques[3]->categoria->slug, 'noticia' => $destaques[3]->slug])}}">
                                             {{$destaques[3]->resumo}}
                                         </a>
-                                    </p>
+                                    </p> -->
                                 </div>
                             @endif
                         </div>
@@ -264,7 +265,8 @@
         <hr>
         <section id="apoio">
             <nav>
-            <img style="filter: contrast(0) brightness();" src="https://homolog.abs-brasil.com/site/img/logo_7seven.svg" alt="7Seven Trends" width="200">  
+            <a href="https://7seventrends.com">
+            <img style="filter: contrast(0) brightness();" src="https://homolog.abs-brasil.com/site/img/logo_7seven.svg" alt="7Seven Trends" width="200"> </a> 
             </nav>
         </section>
     </main>

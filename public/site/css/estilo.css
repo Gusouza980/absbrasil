@@ -339,6 +339,7 @@ body .curso>img {
 body .curso>div>div {
     color: #686868;
     float: right;
+    gap:  15px;
 }
 
 body .curso>div>div p {
@@ -349,6 +350,7 @@ body .curso>div>div p {
     grid-gap: 0.5em;
     justify-content: left;
     align-items: center;
+    margin-top: 25px;
 }
 
 
@@ -3446,6 +3448,22 @@ a.ativo{
         /* display:flex;
         flex-direction: column; */
         align-self: center;
+    }
+    
+    body .curso {
+        flex-direction: column;
+    }
+    
+    body .curso img{
+        max-width: 100%;
+    }
+
+    body .curso img[src =  "https://abs-brasil.com/site/img/curso1.jpg"]{        
+        width: 100%;
+    }
+    body .curso a, body .curso button{
+        margin: 0 auto;
+        margin-top:  10px;
     }
     
     body>footer.footer>section#copy>div:last-child p:first-child {

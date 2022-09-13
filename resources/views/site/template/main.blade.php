@@ -59,10 +59,11 @@
     </div>
     <header class="header home">
         <section class="logos">
-            <a class="ancora" href="/" title="Home"><img src="{{ asset('site/img/logoABS.png') }}" width="115"
-                    height="115" alt="Logomarca Associação Brasileira de Sommeliers - Brasil"></a>
-            <a class="asi" target="_blank" rel="noopener" title="Navegar para ASI" href="https://www.asi.info/"><img
-                    src="{{ asset('site//img/logoASI.png') }}" width="115" height="115" alt="Logomarca ASI"></a>
+            <a class="ancora" href="/" title="Home"><img src="{{ asset('site/img/logoABS.png') }}"
+                    width="115" height="115" alt="Logomarca Associação Brasileira de Sommeliers - Brasil"></a>
+            <a class="asi" target="_blank" rel="noopener" title="Navegar para ASI"
+                href="https://www.asi.info/"><img src="{{ asset('site//img/logoASI.png') }}" width="90"
+                    height="90" alt="Logomarca ASI"></a>
             <!--<h1>Associação Brasileira de Sommeliers - Brasil</h1>-->
             <h1>Associação Brasileira<br>de Sommeliers - Brasil</h1>
             <nav class="sobe">
@@ -73,10 +74,10 @@
                             src="{{ asset('site/img/ico_home.svg') }}" alt="Home"></a>
                     <a href="#" title="Usuário"><img width="23" height="23"
                             src="{{ asset('site//img/ico_user.svg') }}" alt="Usuário"></a>
-                    <a href="#" title="Ajuda"><img width="23" height="23" src="{{ asset('site//img/ico_ajuda.svg') }}"
-                            alt="Ajuda"></a>
-                    <a href="https://www.youtube.com/channel/UCjm6Wo9sSzg3L88oFicZvYg" title="Youtube" target="_blank"
-                        rel="nofollow noopener"><img width="27" height="27"
+                    <a href="#" title="Ajuda"><img width="23" height="23"
+                            src="{{ asset('site//img/ico_ajuda.svg') }}" alt="Ajuda"></a>
+                    <a href="https://www.youtube.com/channel/UCjm6Wo9sSzg3L88oFicZvYg" title="Youtube"
+                        target="_blank" rel="nofollow noopener"><img width="27" height="27"
                             src="{{ asset('site//img/ico_youtube.svg') }}" alt="Youtube"></a>
                     <a href="https://www.instagram.com/abs.brasil/" title="Instagram" target="_blank"
                         rel="nofollow noopener"><img width="27" height="27"
@@ -95,21 +96,22 @@
             <h2>Seja um Sommelier</h2>
             <!--<p>Com nossos cursos online você poderá identificar o vinho pela safra e mostrar que saber de vinho é fundamental.</p>-->
             <!--<div class="nums">
-            <a target="_blank" rel="noopener" title="Navegar curso" href="{{route('site.cursos')}}">
+            <a target="_blank" rel="noopener" title="Navegar curso" href="{{ route('site.cursos') }}">
                 <h3>01</h3>
                 <p>Aguardem - Vem novidades! </p>
             </a>
-            <a target="_blank" rel="noopener" title="Navegar curso" href="{{route('site.cursos')}}">
+            <a target="_blank" rel="noopener" title="Navegar curso" href="{{ route('site.cursos') }}">
                 <h3>02</h3>
                 <p>Curso de Introdução em Coquetelaria - Online</p>
             </a>
-            <a target="_blank" rel="noopener" title="Navegar curso" href="{{route('site.cursos')}}">
+            <a target="_blank" rel="noopener" title="Navegar curso" href="{{ route('site.cursos') }}">
                 <h3>01</h3>
                 <p>Aguardem - Vem novidades!  On-line</p>
             </a>
         </div>-->
             <div class="curso">
-                <img src="{{ asset('site/img/curso1.jpg') }}" width="328" height="183" alt="Imagem curso Header">
+                <img src="{{ asset('site/img/curso1.jpg') }}" width="328" height="183"
+                    alt="Imagem curso Header">
                 <div>
                     <p>Aguardem - Vem novidades! -</p>
                     <h3>On-line</h3>
@@ -118,9 +120,9 @@
                     </h4>
                     <a href="/cadastro">EM BREVE TURMAS</a>
                     <div>
-                        <p><img src="{{asset('site/img/ico_calendario.svg')}}" width="18" height="20"
+                        <p><img src="{{ asset('site/img/ico_calendario.svg') }}" width="18" height="20"
                                 alt="Ícone calendário">Em breve</p>
-                        <p><img src="{{asset('site/img/ico_alarme.svg')}}" width="20" height="20"
+                        <p><img src="{{ asset('site/img/ico_alarme.svg') }}" width="20" height="20"
                                 alt="Ícone despertador">Em breve</p>
                     </div>
                 </div>
@@ -128,10 +130,10 @@
 
             <nav>
                 <div class="menuHeader">
-                    <a href="{{route('site.cursos')}}">Cursos</a>
-                    <a href="{{route('site.quem_somos')}}">ABS Brasil</a>
-                    <a href="{{route('site.estaduais')}}">ABS Estaduais</a>
-                    <a href="{{route('site.noticias')}}">Notícias do Vinho</a>
+                    <a href="{{ route('site.cursos') }}">Cursos</a>
+                    <a href="{{ route('site.quem_somos') }}">ABS Brasil</a>
+                    <a href="{{ route('site.estaduais') }}">ABS Estaduais</a>
+                    <a href="{{ route('site.noticias') }}">Notícias do Vinho</a>
                 </div>
             </nav>
         </section>
@@ -164,9 +166,11 @@
                             </h4>
                             <a href="/cadastro">EM BREVE TURMAS</a>
                             <div>
-                                <p><img src="{{asset('site/img/ico_calendario.svg')}}" width="18" height="20" alt="Ícone calendário">Em
+                                <p><img src="{{ asset('site/img/ico_calendario.svg') }}" width="18"
+                                        height="20" alt="Ícone calendário">Em
                                     breve</p>
-                                <p><img src="{{asset('site/img/ico_alarme.svg')}}" width="20" height="20" alt="Ícone despertador">Em
+                                <p><img src="{{ asset('site/img/ico_alarme.svg') }}" width="20" height="20"
+                                        alt="Ícone despertador">Em
                                     breve</p>
                             </div>
                         </div>
@@ -182,15 +186,15 @@
                             </h4>
                             <a href="/cadastro">EM BREVE TURMAS</a>
                             <div>
-                                <p><img src="{{ asset('site/img/ico_calendario.svg') }}" width="18" height="20"
-                                        alt="Ícone calendário">Em breve</p>
+                                <p><img src="{{ asset('site/img/ico_calendario.svg') }}" width="18"
+                                        height="20" alt="Ícone calendário">Em breve</p>
                                 <p><img src="{{ asset('site/img/ico_alarme.svg') }}" width="20" height="20"
                                         alt="Ícone despertador">Em breve</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a href="{{route('site.cursos')}}" class="btn">Ver agenda completa</a>
+                <a href="{{ route('site.cursos') }}" class="btn">Ver agenda completa</a>
             </div>
         </section>
         <section id="quem-somos" class="fundo">
@@ -201,13 +205,14 @@
                         difusão da cultura do vinho e de outras bebidas, bem como seu consumo responsável, por meio de
                         cursos dirigidos a amadores e profissionais e de inúmeras atividades culturais e sociais.</p>
                 </div>
-                <img src="{{ asset('site/img/quem-somos-mv.jpg') }}" width="298" height="408" alt="Moça vinhos">
+                <img src="{{ asset('site/img/quem-somos-mv.jpg') }}" width="298" height="408"
+                    alt="Moça vinhos">
                 <div>
                     <div>
                         <h2 class="traco">Nossos Cursos</h2>
                         <p>A ABS-Brasil oferece ampla gama de cursos para profissionais e apreciadores do vinho e outras
                             bebidas.</p>
-                        <a href="{{route('site.cursos')}}">Ver cursos</a>
+                        <a href="{{ route('site.cursos') }}">Ver cursos</a>
                     </div>
                     <div>
                     </div>
@@ -222,7 +227,8 @@
                                     <img width="370" height="191" src="{{ asset('site/img/_blog1.jpg') }}"
                                         alt="Ilustra Blog 1">
                                     <p class="info">
-                                        <img width="18" height="19" src="{{ asset('site/img/ico_calendar.svg') }}"
+                                        <img width="18" height="19"
+                                            src="{{ asset('site/img/ico_calendar.svg') }}"
                                             alt="Icone calendário">3.Jun 2021
                                     </p>
                                 </a>
@@ -242,7 +248,8 @@
                                     <img width="370" height="191" src="{{ asset('site/img/_blog2.jpg') }}"
                                         alt="Ilustra Blog 2">
                                     <p class="info">
-                                        <img width="18" height="19" src="{{ asset('site/img/ico_calendar.svg') }}"
+                                        <img width="18" height="19"
+                                            src="{{ asset('site/img/ico_calendar.svg') }}"
                                             alt="Icone calendário">2.Jun 2021
                                     </p>
                                 </a>
@@ -262,7 +269,8 @@
                                     <img width="370" height="191" src="{{ asset('site/img/_blog3.jpg') }}"
                                         alt="Ilustra Blog 3">
                                     <p class="info">
-                                        <img width="18" height="19" src="{{ asset('site/img/ico_calendar.svg') }}"
+                                        <img width="18" height="19"
+                                            src="{{ asset('site/img/ico_calendar.svg') }}"
                                             alt="Icone calendário">3.Jun 2021
                                     </p>
                                 </a>
@@ -277,7 +285,8 @@
                                     <img width="370" height="191" src="{{ asset('site/img/_blog4.jpg') }}"
                                         alt="Ilustra Blog 4">
                                     <p class="info">
-                                        <img width="18" height="19" src="{{ asset('site/img/ico_calendar.svg') }}"
+                                        <img width="18" height="19"
+                                            src="{{ asset('site/img/ico_calendar.svg') }}"
                                             alt="Icone calendário">30.Mai 2021
                                     </p>
                                 </a>
@@ -299,8 +308,8 @@
                 <div>
         </section>
         <section id="numeros">
-            <img class="banner" src="{{ asset('site/img/banner_numeros.jpg') }}" alt="Queijos e vinho" width="405"
-                height="467">
+            <img class="banner" src="{{ asset('site/img/banner_numeros.jpg') }}" alt="Queijos e vinho"
+                width="405" height="467">
             <div class="intro">
                 <h2 class="traco">A ABS</h2>
                 <p>Foi fundada no Rio de Janeiro, em 1983, por iniciativa do sommelier e restaurateur Danio Braga. Em
@@ -309,20 +318,23 @@
             <div class="direita">
                 <div class="caixas">
                     <div>
-                        <img src="{{ asset('site/img/ico_tacas.svg') }}" width="58" height="58" alt="Taças">
+                        <img src="{{ asset('site/img/ico_tacas.svg') }}" width="58" height="58"
+                            alt="Taças">
                         <p><span class="grande">38</span>anos de história</p>
                     </div>
                     <div>
-                        <img src="{{ asset('site/img/ico_globo.svg') }}" width="51" height="51" alt="Pessoas globo">
+                        <img src="{{ asset('site/img/ico_globo.svg') }}" width="51" height="51"
+                            alt="Pessoas globo">
                         <p><span>10</span>ABS Estaduais</p>
                     </div>
                     <div>
-                        <img src="{{ asset('site/img/ico_livros.svg') }}" width="50" height="50" alt="Livros">
+                        <img src="{{ asset('site/img/ico_livros.svg') }}" width="50" height="50"
+                            alt="Livros">
                         <p><span>1</span>Curso</p>
                     </div>
                 </div>
                 <h2>Fonte de formação de sommeliers profissionais do país</h2>
-                <a href="{{route('site.quem_somos')}}" class="botao">Quem somos</a>
+                <a href="{{ route('site.quem_somos') }}" class="botao">Quem somos</a>
             </div>
         </section>
         <section id="sommelierHome" class="fundo">
@@ -370,13 +382,17 @@
         <section id="apoio">
             <nav>
                 <a target="_blank" rel="noopener" title="Navegar para apoio 1" href="#"><img
-                        src="{{ asset('site/img/apoio4.jpg') }}" width="117" height="117" alt="Logomarca Apoio 4"></a>
+                        src="{{ asset('site/img/apoio4.jpg') }}" width="117" height="117"
+                        alt="Logomarca Apoio 4"></a>
                 <a target="_blank" rel="noopener" title="Navegar para apoio 2" href="#"><img
-                        src="{{ asset('site/img/apoio2.jpg') }}" width="117" height="117" alt="Logomarca Apoio 2"></a>
+                        src="{{ asset('site/img/apoio2.jpg') }}" width="117" height="117"
+                        alt="Logomarca Apoio 2"></a>
                 <a target="_blank" rel="noopener" title="Navegar para apoio 3" href="#"><img
-                        src="{{ asset('site/img/apoio3.jpg') }}" width="117" height="117" alt="Logomarca Apoio 3"></a>
+                        src="{{ asset('site/img/apoio3.jpg') }}" width="117" height="117"
+                        alt="Logomarca Apoio 3"></a>
                 <a target="_blank" rel="noopener" title="Navegar para apoio 4" href="#"><img
-                        src="{{ asset('site/img/apoio4.jpg') }}" width="117" height="117" alt="Logomarca Apoio 4"></a>
+                        src="{{ asset('site/img/apoio4.jpg') }}" width="117" height="117"
+                        alt="Logomarca Apoio 4"></a>
             </nav>
         </section>
     </main>
@@ -387,19 +403,19 @@
                     <a title="Home" href="/"><img src="{{ asset('site/img/logoABS.png') }}" width="115"
                             height="115" alt="Logomarca '.SIS_NOME.'"></a>
                     <a target="_blank" rel="noopener" title="Navegar para ASI" href="https://www.asi.info/"><img
-                            src="{{ asset('site/img/logoASI.png') }}" width="115" height="115"
+                            src="{{ asset('site/img/logoASI.png') }}" width="90" height="90"
                             alt="Logomarca ASI"></a>
                 </div>
                 <div class="social">
                     <a class="ifl1linkIcone" target="_blank" rel="noopener" title="Facebook"
-                        href="{{$configuracoes->facebook}}"><img src="{{ asset('site/img/ico_face.svg') }}" width="27"
-                            height="27" alt="Ícone Facebook"></a>
+                        href="{{ $configuracoes->facebook }}"><img src="{{ asset('site/img/ico_face.svg') }}"
+                            width="27" height="27" alt="Ícone Facebook"></a>
                     <a class="ifl1linkIcone" target="_blank" rel="noopener" title="Instagram"
-                        href="{{$configuracoes->instagram}}"><img src="{{ asset('site/img/ico_insta.svg') }}" width="27"
-                            height="27" alt="Ícone Instagram"></a>
+                        href="{{ $configuracoes->instagram }}"><img src="{{ asset('site/img/ico_insta.svg') }}"
+                            width="27" height="27" alt="Ícone Instagram"></a>
                     <a class="ifl1linkIcone" target="_blank" rel="noopener" title="Youtube"
-                        href="{{$configuracoes->youtube}}"><img src="{{ asset('site/img/ico_youtube.svg') }}" width="27"
-                            height="27" alt="Ícone Youtube"></a>
+                        href="{{ $configuracoes->youtube }}"><img src="{{ asset('site/img/ico_youtube.svg') }}"
+                            width="27" height="27" alt="Ícone Youtube"></a>
                 </div>
             </div>
             <div>
@@ -408,8 +424,8 @@
                     <p>Receba as atualizações do site, brindes e notícias da ABS.</p>
                 </div>
                 <div class="btn">
-                    <a href="/cadastro">Assinar <img width="47" height="8" src="{{asset('site/img/ico_setaLonga.svg')}}"
-                            alt="Seta Longa"></a>
+                    <a href="/cadastro">Assinar <img width="47" height="8"
+                            src="{{ asset('site/img/ico_setaLonga.svg') }}" alt="Seta Longa"></a>
                 </div>
             </div>
         </section>
@@ -418,21 +434,22 @@
             <h3>Menu</h3>
             <nav>
                 <div class="ancoraLista">
-                    <a href="{{route('site.cursos')}}">Cursos</a>
-                    <a href="{{route('site.quem_somos')}}">ABS Brasil</a>
-                    <a href="{{route('site.estaduais')}}">ABS Estaduais</a>
-                    <a href="{{route('site.noticias')}}">Notícias do Vinho</a>
+                    <a href="{{ route('site.cursos') }}">Cursos</a>
+                    <a href="{{ route('site.quem_somos') }}">ABS Brasil</a>
+                    <a href="{{ route('site.estaduais') }}">ABS Estaduais</a>
+                    <a href="{{ route('site.noticias') }}">Notícias do Vinho</a>
                 </div>
                 <div>
                     <a target="_blank" rel="noopener" title="Ver mapa" href="'.CONTATO_GMAPS.'"><img
                             src="{{ asset('site/img/ico_user.svg') }}" width="20" height="22"
                             alt="Ícone usuário">'.ENDERECO_RUANUM.' - '.ENDERECO_BAIRRO.' / '.ENDERECO_CIDADE.' -
                         '.ENDERECO_UF.'</a>
-                    <!--<a target="_blank" rel="noopener" title="Telefone" href="tel:{{$configuracoes->telefone}}"><img src="{{ asset('site/img/ico_fone.svg') }}" width="25" height="25" alt="Ícone Telefone">{{$configuracoes->telefone}}</a>
-                    <a class="whatsapp" target="_blank" rel="noopener" title="WhatsApp" href="https://api.whatsapp.com/send?phone=55{{$configuracoes->whatsapp}}"><img src="{{ asset('site/img/ico_whats.svg') }}" width="27" height="27" alt="Ícone WhatsApp">{{$configuracoes->whatsapp}}</a>
-                    --><a target="_blank" rel="noopener" title="Email" href="mailto:{{$configuracoes->email}}"><img
+                    <!--<a target="_blank" rel="noopener" title="Telefone" href="tel:{{ $configuracoes->telefone }}"><img src="{{ asset('site/img/ico_fone.svg') }}" width="25" height="25" alt="Ícone Telefone">{{ $configuracoes->telefone }}</a>
+                    <a class="whatsapp" target="_blank" rel="noopener" title="WhatsApp" href="https://api.whatsapp.com/send?phone=55{{ $configuracoes->whatsapp }}"><img src="{{ asset('site/img/ico_whats.svg') }}" width="27" height="27" alt="Ícone WhatsApp">{{ $configuracoes->whatsapp }}</a>
+                    --><a target="_blank" rel="noopener" title="Email"
+                        href="mailto:{{ $configuracoes->email }}"><img
                             src="{{ asset('site/img/ico_envelope.svg') }}" width="25" height="25"
-                            alt="Ícone envelope">{{$configuracoes->email}}</a>
+                            alt="Ícone envelope">{{ $configuracoes->email }}</a>
                 </div>
             </nav>
         </section>
@@ -446,15 +463,33 @@
             <div>
                 <p>Desenvolvido por <a href="https://7seventrends.com"
                         title="Clique para visitar o site da 7 Seven Trends" target="_blank"
-                        rel="nofollow noopener"><img width="68" height="16" src="{{asset('site/img/logo_7seven.svg')}}"
-                            alt="7Seven Trends"></a></p>
+                        rel="nofollow noopener"><img width="68" height="16"
+                            src="{{ asset('site/img/logo_7seven.svg') }}" alt="7Seven Trends"></a></p>
             </div>
         </section>
     </footer>
     <script src="{{ asset('site/js/script.js') }}"></script>
     <script src="/_ifl1/ifl1formatador.js"></script>
     <script src="/_ifl1/ifl1validador.js"></script>
-    <script type='text/javascript'>var s=document.createElement('script');s.type='text/javascript';var v=parseInt(Math.random()*1000000);s.src='https://sandbox.gerencianet.com.br/v1/cdn/cfa14db51d4925e565854d09d575e305/'+v;s.async=false;s.id='cfa14db51d4925e565854d09d575e305';if(!document.getElementById('cfa14db51d4925e565854d09d575e305')){document.getElementsByTagName('head')[0].appendChild(s);};$gn={validForm:true,processed:false,done:{},ready:function(fn){$gn.done=fn;}};</script>
+    <script type='text/javascript'>
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        var v = parseInt(Math.random() * 1000000);
+        s.src = 'https://sandbox.gerencianet.com.br/v1/cdn/cfa14db51d4925e565854d09d575e305/' + v;
+        s.async = false;
+        s.id = 'cfa14db51d4925e565854d09d575e305';
+        if (!document.getElementById('cfa14db51d4925e565854d09d575e305')) {
+            document.getElementsByTagName('head')[0].appendChild(s);
+        };
+        $gn = {
+            validForm: true,
+            processed: false,
+            done: {},
+            ready: function(fn) {
+                $gn.done = fn;
+            }
+        };
+    </script>
 </body>
 
 </html>
