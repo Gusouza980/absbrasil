@@ -15,8 +15,8 @@ class AlterTableCursos extends Migration
     {
         //
         Schema::table('cursos', function (Blueprint $table) {
-            $table->double("preco");
-            $table->tinyInteger("tipo");
+            $table->double("preco")->nullable();
+            $table->tinyInteger("tipo")->nullable();
         });
     }
 

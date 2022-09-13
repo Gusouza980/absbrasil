@@ -79,4 +79,20 @@ class ConfiguracoesController extends Controller
         $configuracoes = Configuracao::first();
         return view("painel.configuracoes.destaque_suspenso", ["configuracoes" => $configuracoes]);
     }
+
+    public function meios_pagamento(){
+        $configuracoes = Configuracao::first();
+        return view("painel.configuracoes.meios_pagamento", ["configuracoes" => $configuracoes]);
+    }
+
+    public function meios_pagamento_salvar(Request $request){
+        $configuracoes = Configuracao::first();
+
+        $configuracoes->min_valor_parcela_boleto = $request->min_valor_parcela_boleto;
+        $configuracoes->max_parcelas_boleto = $request->max_parcelas_boleto;
+        $configuracoes->save();
+
+        toastr()->success("Configurações de boleto salvas.");
+        return redirect()->back();
+    }
 }

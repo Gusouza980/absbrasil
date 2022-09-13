@@ -260,10 +260,13 @@ $usuario = \App\Models\Usuario::find(session()->get("usuario")["id"]);
                                 </a>
                             </li>
                             <li>
-                                <a href="{{route('painel.indisponivel')}}" class="waves-effect">
+                                <a href="javascript: void(0);" class="waves-effect">
                                     <i class="bx bx-money" aria-hidden="true"></i>
-                                    <span key="t-dashboards">Pagamentos (i)</span>
+                                    <span key="t-dashboards">Pagamentos</span>
                                 </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{route('painel.vendas')}}" key="t-default">Vendas</a></li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="{{route('painel.cursos')}}" class="waves-effect">
@@ -289,7 +292,7 @@ $usuario = \App\Models\Usuario::find(session()->get("usuario")["id"]);
                                     <span key="t-dashboards">Cadastros</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="{{route('painel.indisponivel')}}" key="t-default">Alunos (i)</a></li>
+                                    <li><a href="{{route('painel.alunos')}}" key="t-default">Alunos</a></li>
                                 </ul>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('painel.indisponivel')}}" key="t-default">Professores (i)</a></li>
@@ -364,6 +367,12 @@ $usuario = \App\Models\Usuario::find(session()->get("usuario")["id"]);
                                 <a href="{{route('painel.app')}}" class="waves-effect">
                                     <i class="bx bx-mobile" aria-hidden="true"></i>
                                     <span key="t-dashboards">App Link</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('painel.configuracoes.meios-pagamento')}}" class="waves-effect">
+                                    <i class="fas fa-qrcode" aria-hidden="true"></i>
+                                    <span key="t-dashboards">Meios de Pagamento</span>
                                 </a>
                             </li>
                             <li>

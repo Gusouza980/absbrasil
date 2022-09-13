@@ -27,7 +27,7 @@ return [
         0 => "Manhã",
         1 => "Tarde",
         2 => "Noite"
-    ]
+    ],
 ];
 
 ?>

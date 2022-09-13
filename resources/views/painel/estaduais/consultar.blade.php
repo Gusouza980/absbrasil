@@ -37,8 +37,8 @@
                             <tr>
                                 <td>
                                     <div class="dropdown mt-4 mt-sm-0">
-                                        <a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="fas fa-search" aria-hidden="true"></i>
+                                        <a href="#" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fas fa-bars" aria-hidden="true"></i>
                                         </a>
                                         <div class="dropdown-menu" style="margin: 0px;">
                                             <a href="{{route('painel.estadual.editar', ['estadual' => $estadual])}}" id="" class="dropdown-item" role="button"><i class="bx bx-edit-alt pr-3"></i> Editar</a>

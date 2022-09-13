@@ -181,7 +181,16 @@
                     {{--  MENSAGENS DE ERRO  --}}
                     @if(session()->get("erro"))
                         {{--  {{session()->get("erro")}} para escrever a mensagem  --}}
-                        {{--  EX: <span>{{session()->get("erro")}}</span>  --}}
+                        {{--  EX: <span>{{session()->get("erro")}}</span>  --}}  
+                                         
+                        <div class="alert alert-danger">
+                            {{session()->get("erro")}}
+                        </div>
+
+                        <style>
+                            .alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem;}
+                            .alert-danger{color:#721c24;background-color:#f8d7da;border-color:#f5c6cb;font-family: "Spartan", sans-serif;font-weight: bold;font-size: 2rem;line-height: 22px;}
+                        </style>
                     @endif
                     <form action="{{route('site.aluno.cadastrar')}}" method="POST">
                         @csrf
@@ -280,7 +289,14 @@
 
         }
     </script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="{{ asset('site/js/script.js') }}"></script>
+    <script src="{{ asset('site/js/masks.js') }}"></script>
+
     <script src="/_ifl1/ifl1formatador.js"></script>
     <script src="/_ifl1/ifl1validador.js"></script>
 </body>

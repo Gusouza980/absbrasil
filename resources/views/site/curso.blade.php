@@ -429,9 +429,15 @@
                             </div>
                             <div class="row">
                                 @if($turma->aberto)
+<<<<<<< HEAD
                           
                                 <img style="cursor: pointer" id="showterms" src="{{asset('site/img/comprarbutton.svg')}}"> 
                                                          
+=======
+                                    {{--  {!! $turma->botao_comprar !!}  --}}
+
+                                    <a href="{{route('site.carrinho-adicionar', ['turma' => $turma])}}">Inscrever-se</a>
+>>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790
                                 @else
                                     <button>Encerrado</button>
                                 @endif

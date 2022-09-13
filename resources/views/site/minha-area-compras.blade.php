@@ -199,39 +199,43 @@
                 </div>
             </div>
             <div class="_pedidosList">
-                <div class="_pedido">
-                    <h3>N. 5588893390122</h3>
-                    <div class="_info">
-                        <div class="data">
-                            <div class="_svg">
-                                <img src="{{asset('site/img/sistema/calendar.svg')}}" alt="">
+                @foreach($aluno->pedidos as $pedido)
+                    <div class="_pedido">
+                        <h3>N. {{$pedido->codigo}}</h3>
+                        <div class="_info">
+                            <div class="data">
+                                <div class="_svg">
+                                    <img src="{{asset('site/img/sistema/calendar.svg')}}" alt="">
+                                </div>
+                                <p>{{date("d.m.Y", strtotime($pedido->created_at))}}</p>
                             </div>
-                            <p>12.05.2020</p>
+                            <div class="numero">
+                                <div class="_svg">
+                                    <img src="{{asset('site/img/sistema/plane.svg')}}" alt="">
+                                </div>
+                                <p>{{$pedido->carrinho->produtos->count()}} Produtos</p>
+                            </div>
                         </div>
-                        <div class="numero">
+                        <button class="btn-primary">
+                            Mais detalhes
                             <div class="_svg">
-                                <img src="{{asset('site/img/sistema/plane.svg')}}" alt="">
+                                <img src="{{asset('site/img/sistema/buttonArrowRight.svg')}}" alt="">
                             </div>
-                            <p>03 Produtos</p>
+                        </button>
+                        <div class="_status _waiting">
+                            <div class="_icon">
+                                <img src="{{asset('site/img/sistema/dollar.svg')}} " alt="">
+                            </div>
+                            <div class="_text">
+                                <span>Aguardando Pag.</span>
+                                @if($pedido->forma == 0)
+                                    <p>{{date("d.m.Y", strtotime($pedido->boleto->expira))}}</p>
+                                @endif
+                            </div>
                         </div>
                     </div>
-                    <button class="btn-primary">
-                        Mais detalhes
-                        <div class="_svg">
-                            <img src="{{asset('site/img/sistema/buttonArrowRight.svg')}}" alt="">
-                        </div>
-                    </button>
-                    <div class="_status _waiting">
-                        <div class="_icon">
-                            <img src="{{asset('site/img/sistema/dollar.svg')}} " alt="">
-                        </div>
-                        <div class="_text">
-                            <span>Aguardando Pag.</span>
-                            <p>13.05.2020</p>                            
-                        </div>
-                    </div>
-                </div>
-                <div class="_pedido">
+                @endforeach
+                {{--  <div class="_pedido">
                     <h3>N. 5588893390122</h3>
                     <div class="_info">
                         <div class="data">
@@ -326,7 +330,7 @@
                             <p>13.05.2020</p>                            
                         </div>
                     </div>
-                </div>
+                </div>  --}}
             </div>
         </div>
     </section>

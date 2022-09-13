@@ -18,6 +18,7 @@ class CreateTurmasTable extends Migration
             $table->unsignedBigInteger("curso_id")->nullable();
             $table->string("nome")->nullable();
             $table->date("data")->nullable();
+            $table->time("horario")->nullable();
             $table->tinyInteger("periodo")->nullable();
             $table->string("local")->nullable();
             $table->double("preco")->nullable();

@@ -196,8 +196,10 @@
                     </div>
                 </div>
             </div>
+            <div class="_scrollMatriculas">
+                
             <div class="_matriculasList">
-                <div class="_matricula" style="height: auto;">
+                <div class="_matricula">
                     <div class="_image">
                         <img src="{{asset('site/img/sistema/Icone (2).png')}}" alt="">
                     </div>
@@ -213,7 +215,7 @@
                     </div>
 
                 </div>
-                <div class="_matricula" style="height: auto;">
+                <div class="_matricula">
                     <div class="_image">
                         <img src="{{asset('site/img/sistema/Icone (3).png')}}" alt="">
                     </div>
@@ -229,7 +231,7 @@
                     </div>
 
                 </div>
-                <div class="_matricula" style="height: auto;">
+                <div class="_matricula">
                     <div class="_image">
                         <img src="{{asset('site/img/sistema/Icone (1).png')}}" alt="">
                     </div>
@@ -245,6 +247,7 @@
                     </div>
 
                 </div>
+            </div>
             </div>
         </div>
     </section>

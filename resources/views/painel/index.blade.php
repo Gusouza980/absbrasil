@@ -75,9 +75,11 @@
                             $noticia = \App\Models\Noticia::orderBy("visualizacoes", "DESC")->first();
                         @endphp
                         <p class="text-muted fw-medium">Noticia mais Visitada</p>
-                        <h5 class="mb-0">
-                            <a href="{{route('painel.noticia.editar', ['noticia' => $noticia])}}">#{{$noticia->id}}</a> - {{$noticia->visualizacoes}} Visitas
-                        </h5>
+                        @if($noticia)
+                            <h5 class="mb-0">
+                                <a href="{{route('painel.noticia.editar', ['noticia' => $noticia])}}">#{{$noticia->id}}</a> - {{$noticia->visualizacoes}} Visitas
+                            </h5>
+                        @endif
                         {{--  <h5 class="mt-3">{{$maior_visitas}} visitas</h5>  --}}
                     </div>
 

@@ -11,6 +11,11 @@ class AlunosController extends Controller
 {
     //
 
+    public function consultar(){
+        $alunos = Aluno::all();
+        return view("painel.alunos.consultar", ["alunos" => $alunos]);
+    }
+
     public function cadastrar(Request $request){
         $validated = $request->validate([
             'nome' => 'max:50',
@@ -28,7 +33,11 @@ class AlunosController extends Controller
         $aluno->ultimo_acesso = date("Y-m-d");
         $aluno->save();
         session()->put(["aluno" => $aluno->toArray()]);
-        return redirect()->route('site.minha-area');
+        if(session()->get("produto_adicionar")){
+            return redirect(session()->get("produto_adicionar"));
+        }else{
+            return redirect()->route('site.minha-area');
+        }
     }
 
     public function logar(Request $request){
@@ -38,7 +47,11 @@ class AlunosController extends Controller
             $aluno->save();
             session()->put(["aluno" => $aluno->toArray()]);
             Log::channel('acessos')->info('LOGIN: O aluno ' . $aluno->nome . ' logou no sistema.');
-            return redirect()->route('site.minha-area');
+            if(session()->get("produto_adicionar")){
+                return redirect(session()->get("produto_adicionar"));
+            }else{
+                return redirect()->route('site.minha-area');
+            }
         }else{
             session()->flash("erro", "E-mail ou senha incorretos");
             return redirect()->back();

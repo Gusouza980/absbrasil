@@ -77,3 +77,8 @@
 <script src="{{ asset('site/js/script.js') }}"></script>
 <script src="/_ifl1/ifl1formatador.js"></script>
 <script src="/_ifl1/ifl1validador.js"></script>
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790

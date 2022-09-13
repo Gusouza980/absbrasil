@@ -220,9 +220,9 @@ section._menu .container-fav ._user ._text ._sair {
   font-size: 1.4rem;
 }
 section._menu .container-fav ._user ._img {
-  height: 5rem;
+  height: 50px;
   width: 100%;
-  max-width: 5rem;
+  max-width: 50px;
 
   display: flex;
   align-items: center;
@@ -242,7 +242,7 @@ section._menu .container-fav ._user ._img {
   border-radius: 50%;
 }
 section._mobileMenu {
-  top: 12.5rem;
+  top: 0;
   left: -200vw;
   height: auto;
   width: 100%;
@@ -570,14 +570,16 @@ section._minhasMatriculas ._top ._topbutton ._btn {
 
   cursor: pointer;
 }
-
+section._minhasMatriculas ._scrollMatriculas {
+  width: 100%;
+}
 section._minhasMatriculas ._matriculasList {
   display: flex;
   gap: 3.2rem;
   margin-top: 3.3rem;
 }
 section._minhasMatriculas ._matriculasList ._matricula {
-  height: 41.4rem;
+  height: auto;
   width: 100%;
   max-width: 28rem;
 
@@ -679,15 +681,13 @@ section._meusDados .container-fav ._dados label {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 section._meusDados .container-fav ._dados label ._icon {
   position: absolute;
   left: 2.8rem;
 }
 
-section._meusDados .container-fav ._dados button{
-  
+section._meusDados .container-fav ._dados button {
   width: 100%;
   height: 5.2rem;
   border-radius: 0.4rem;
@@ -699,15 +699,15 @@ section._meusDados .container-fav ._dados button{
 
   background: var(--orange2);
 }
-section._meusDados .container-fav ._dados:last-child{
+section._meusDados .container-fav ._dados:last-child {
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
-section._meusDados .container-fav ._dados:last-child label{
+section._meusDados .container-fav ._dados:last-child label {
   max-width: 49%;
 }
-section._meusDados .container-fav ._dados:last-child button{
+section._meusDados .container-fav ._dados:last-child button {
   max-width: 49%;
   float: right;
 }
@@ -1095,38 +1095,19 @@ section.s_identificacao .container-fav ._half .content ._offtitle ._left {
 
   height: 31.3rem;
 }
-section.s_identificacao
-  .container-fav
-  ._half
-  .content
-  ._offtitle
-  ._left
-  ._forgotPass {
+section.s_identificacao .container-fav ._half .content ._offtitle ._left ._forgotPass {
   display: flex;
   gap: 2.2rem;
   font-size: 1.4rem;
   color: var(--lightbrown);
 }
-section.s_identificacao
-  .container-fav
-  ._half
-  .content
-  ._offtitle
-  ._left
-  ._others {
+section.s_identificacao .container-fav ._half .content ._offtitle ._left ._others {
   width: 100%;
   margin-top: 3.2rem;
   padding-top: 3.2rem;
   border-top: solid 1px var(--gray11);
 }
-section.s_identificacao
-  .container-fav
-  ._half
-  .content
-  ._offtitle
-  ._left
-  ._others
-  ._buttons {
+section.s_identificacao .container-fav ._half .content ._offtitle ._left ._others ._buttons {
   display: flex;
   gap: 1.7rem;
 }
@@ -1252,14 +1233,7 @@ section.s_compraRealizada .container-fav ._half ._info ._infoItem ._name .text {
   display: flex;
   gap: 1.7rem;
 }
-section.s_compraRealizada
-  .container-fav
-  ._half
-  ._info
-  ._infoItem
-  ._name
-  .text
-  span {
+section.s_compraRealizada .container-fav ._half ._info ._infoItem ._name .text span {
   font-size: 1.6rem;
   font-weight: 500;
   color: var(--wine12);
@@ -1275,24 +1249,12 @@ section.s_compraRealizada .container-fav ._half ._info ._infoItem ._pagInfo p {
   font-weight: 500;
   display: inline-block;
 }
-section.s_compraRealizada
-  .container-fav
-  ._half
-  ._info
-  ._infoItem
-  ._pagInfo
-  ._cCard {
+section.s_compraRealizada .container-fav ._half ._info ._infoItem ._pagInfo ._cCard {
   display: block;
   width: 100%;
 }
 
-section.s_compraRealizada
-  .container-fav
-  ._half
-  ._info
-  ._infoItem
-  ._pagInfo
-  ._payment {
+section.s_compraRealizada .container-fav ._half ._info ._infoItem ._pagInfo ._payment {
   font-size: 1.6rem;
   font-weight: 500;
 
@@ -1323,11 +1285,7 @@ section.s_compraRealizada .container-fav ._half ._buttons button.btn-primary {
 
   background: var(--orange2);
 }
-section.s_compraRealizada
-  .container-fav
-  ._half
-  ._buttons
-  button.btn-primary._secundary {
+section.s_compraRealizada .container-fav ._half ._buttons button.btn-primary._secundary {
   background: var(--gray11);
   color: var(--orange2);
 }
@@ -1341,12 +1299,7 @@ body._carrinho section.s_identificacao .container-fav ._half ._top ._img {
 body._carrinho section.s_identificacao .container-fav ._half ._top {
   gap: 5px;
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._half
-  ._top
-  ._title._active {
+body._carrinho section.s_identificacao .container-fav ._half ._top ._title._active {
   border: none;
 }
 body._carrinho section.s_identificacao .container-fav ._half ._top .arrow {
@@ -1359,73 +1312,34 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._topInfo {
   padding-bottom: 3.2rem;
   border-bottom: 1px solid var(--gray11);
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._topInfo
-  div {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._topInfo div {
   display: flex;
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._topInfo
-  .row {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._topInfo .row {
   width: 100%;
   max-width: 36.2rem;
   justify-content: space-between;
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._topInfo
-  .row
-  ._name {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._topInfo .row ._name {
   gap: 1.5rem;
   margin-bottom: 2.4rem;
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._topInfo
-  .row:nth-child(2) {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._topInfo .row:nth-child(2) {
   width: 100%;
   max-width: 100%;
   justify-content: space-between;
   align-items: center;
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._topInfo
-  .row:nth-child(2)
-  p {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._topInfo .row:nth-child(2) p {
   width: 100%;
   max-width: 37.6rem;
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._topInfo
-  .row:nth-child(2)
-  span {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._topInfo .row:nth-child(2) span {
   font-size: 1.6rem;
 
   color: var(--orange2);
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._topInfo
-  .row
-  p {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._topInfo .row p {
   font-size: 1.4rem;
   color: #d9a863;
 }
@@ -1436,35 +1350,18 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._cupom {
   padding: 3.2rem 0;
   border-bottom: 1px solid var(--gray11);
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._cupom
-  ._input {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._cupom ._input {
   width: 100%;
   max-width: 38.4rem;
   height: 100%;
 
   position: relative;
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._cupom
-  ._input
-  ._form {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._cupom ._input ._form {
   display: flex;
   gap: 0.5rem;
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._cupom
-  ._input
-  button {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._cupom ._input button {
   padding: 2.3rem 2.7rem;
   border-radius: 0.4rem;
   display: flex;
@@ -1473,13 +1370,7 @@ body._carrinho
   background-color: var(--wine11);
   max-width: 6.3rem;
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._cupom
-  ._input
-  input {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._cupom ._input input {
   border: 1px solid var(--gray11);
   max-width: 31.4rem;
   padding: 1.7rem 4.2rem;
@@ -1489,13 +1380,7 @@ body._carrinho
 
   color: var(--wine12);
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._cupom
-  ._input
-  ._svg {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._cupom ._input ._svg {
   position: absolute;
   top: 2.1rem;
   left: 1.9rem;
@@ -1521,12 +1406,7 @@ body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons {
   justify-content: space-between;
   margin-top: 2.5rem;
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._buttons
-  .button {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .button {
   width: 100%;
   height: 12.9rem;
   display: flex;
@@ -1539,39 +1419,19 @@ body._carrinho
 
   cursor: pointer;
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._buttons
-  .button
-  p {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .button p {
   margin: 0;
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._buttons
-  .button:first-child {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons .button:first-child {
   background-color: var(--gray11);
   color: var(--wine12);
 }
 
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._pagamentoCartao {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCartao {
   max-width: 41.6rem;
   padding-top: 3.2rem;
 }
-body._carrinho
-  section.s_identificacao
-  .container-fav
-  ._pagamento
-  ._pagamentoCartao
-  ._form {
+body._carrinho section.s_identificacao .container-fav ._pagamento ._pagamentoCartao ._form {
   padding-top: 2.4rem;
 }
 body._carrinho
@@ -1663,9 +1523,28 @@ body._carrinho
   div._sidemenu {
     display: inline-block;
   }
+  ._scrollMatriculas {
+    max-width: 100vw;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+  }
   section._meusPedidos ._pedidosList,
-  section._minhasMatriculas ._matriculasList {
+  section._meusPedidos ._scrollMatriculas {
     overflow-x: scroll;
+  }
+  section._minhasMatriculas ._matriculasList {
+    width: max-content;
+  }
+  section._minhasMatriculas ._matriculasList ._matricula {
+    height: 60.4rem;
+    max-width: 47rem;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+  }
+  section._minhasMatriculas ._matriculasList ._matricula ._content {
+    margin-top: 12.3rem;
+    width: 100%;
   }
 
   body._carrinho .container-fav ._carButton {
@@ -1692,24 +1571,23 @@ body._carrinho
   }
 
   section._meusDados .container-fav {
-    flex-direction: column-reverse;    
-   align-items: center;
+    flex-direction: column-reverse;
+    align-items: center;
     gap: 3rem;
   }
-  section._meusDados .container-fav ._right{
+  section._meusDados .container-fav ._right {
     max-width: 43rem;
   }
-  section._meusDados .container-fav ._left{
+  section._meusDados .container-fav ._left {
     max-width: 43rem;
     margin-left: 0;
     align-items: center;
   }
-  section._meusDados .container-fav ._left a{
+  section._meusDados .container-fav ._left a {
     margin-left: 0;
   }
 
-
-    section._meusDados .container-fav ._right ._dados {
+  section._meusDados .container-fav ._right ._dados {
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -1722,22 +1600,21 @@ body._carrinho
     align-items: center;
     justify-content: center;
   }
-  section._meusDados .container-fav ._right ._dados label{
+  section._meusDados .container-fav ._right ._dados label {
     gap: 1.5rem;
     width: 100%;
     align-items: center;
     justify-content: center;
-
   }
-  
-  section._meusDados .container-fav ._dados:last-child button{
+
+  section._meusDados .container-fav ._dados:last-child button {
     max-width: 100%;
   }
   section._meusDados .container-fav ._dados ._dadosComponent {
     max-width: 43rem;
   }
-  
-  section._meusDados .container-fav ._dados:last-child label{
+
+  section._meusDados .container-fav ._dados:last-child label {
     max-width: 100%;
   }
 }
@@ -1756,13 +1633,7 @@ body._carrinho
   body._carrinho section.s_identificacao .container-fav ._pagamento ._buttons {
     flex-direction: column;
   }
-  body._carrinho
-    section.s_identificacao
-    .container-fav
-    ._pagamento
-    ._cupom
-    ._input
-    button {
+  body._carrinho section.s_identificacao .container-fav ._pagamento ._cupom ._input button {
     height: 6.3rem;
     width: 6.3rem;
     padding: 0;
@@ -1793,4 +1664,124 @@ body._carrinho
     flex-direction: column;
     align-items: center;
   }
+}
+
+.pop-up-box img {
+  display: inline;
+}
+.pop-up-box p {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #c42e5f;
+}
+.pop-up-middle p {
+  color: #c42e5f;
+}
+
+.pop-up-confirmacao {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+  transition: 0.32s;
+  opacity: 0;
+
+  z-index: 999;
+}
+.pop-up-confirmacao.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.pop-up-confirmacao.active .pop-up-box {
+  transform: scale(1);
+}
+
+.pop-up-blackground {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.pop-up-box {
+  z-index: 4;
+  background: white;
+  border-radius: 45px;
+  width: 100%;
+  max-width: 957px;
+  height: auto;
+
+  transition: 0.32s;
+  transform: scale(0);
+
+  padding: 44px 116px;
+
+  box-sizing: border-box;
+}
+
+.pop-up-header {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 34px;
+
+  border-bottom: 2px solid #eb5c5d;
+}
+.pop-up-header .logos {
+  margin-bottom: 47px;
+}
+.pop-up-header .logos img:last-child {
+  margin-left: 15px;
+}
+
+.pop-up-middle {
+  width: 100%;
+  text-align: center;
+  padding-top: 34px;
+  padding-bottom: 38px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.pop-up-middle .icon {
+  margin-bottom: 8px;
+}
+.pop-up-buttons {
+  padding-top: 48px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.pop-up-buttons button {
+  height: 52px;
+  width: 100%;
+  max-width: 315px;
+
+  background: white;
+  color: #fe96b8;
+
+  border: none;
+  font-size: 18px;
+}
+
+.pop-up-buttons button.confirm {
+  background: #83c70b;
+  border-radius: 4px;
+
+  color: white;
+}
+
+.pop-up-buttons button:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }

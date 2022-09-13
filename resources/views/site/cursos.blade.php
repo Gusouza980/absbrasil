@@ -29,8 +29,11 @@
                         <h2>{{$curso->titulo}}</h2>
                         <h3>On-line</h3>
     <!-- 						<p>O curso Aguardem - Vem novidades!  é a porta de entrada nesse fascinante mundo, o mais abrangente e completo curso de Aguardem - Vem novidades! . Objetivo, levar informações e curiosidades gerais sobre este universo tão vasto, porém de forma muito leve e descontraída.</p> -->
-                        
-                        <a href="{{route('site.curso', ['slug' => $curso->slug])}}">VER MAIS</a>
+                        @if($turma)
+                            <a href="{{route('site.curso', ['slug' => $curso->slug])}}">VER MAIS</a>
+                        @else
+                            <a >EM BREVE</a>
+                        @endif
                     </div>
                 @endforeach
 <!--					<div>

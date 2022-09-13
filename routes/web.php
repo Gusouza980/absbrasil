@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/testes', [\App\Http\Controllers\GerencianetController::class, 'teste']);
+Route::get('/testes', [\App\Http\Controllers\CieloController::class, 'capturar']);
 
 Route::get('/', [\App\Http\Controllers\SiteController::class, 'index'])->name("site.index");
 Route::get('/quem-somos', [\App\Http\Controllers\SiteController::class, 'quem_somos'])->name("site.quem_somos");
@@ -36,10 +36,19 @@ Route::get('/noticia/{categoria}/{noticia}', [\App\Http\Controllers\SiteControll
 Route::get('/recuperar-senha', [\App\Http\Controllers\SiteController::class, 'recuperar_senha'])->name("site.recuperar-senha");
 
 //ROTAS DE CARRINHO
-Route::get('/carrinho/pagamento', [\App\Http\Controllers\SiteController::class, 'pagamento'])->name("site.carrinho-pagamento");
-Route::get('/carrinho/identificacao', [\App\Http\Controllers\SiteController::class, 'identificacao'])->name("site.carrinho-identificacao");
-Route::get('/carrinho/confirmacao', [\App\Http\Controllers\SiteController::class, 'confirmacao'])->name("site.carrinho-confirmacao");
-Route::get('/carrinho/efetuar', [\App\Http\Controllers\SiteController::class, 'efetuar'])->name("site.carrinho-efetuar");
+Route::get('/carrinho/adicionar/{turma}', [\App\Http\Controllers\CarrinhoController::class, 'adicionar'])->name("site.carrinho-adicionar");
+Route::get('/carrinho/pagamento/cartao', [\App\Http\Controllers\CarrinhoController::class, 'pagamento_cartao'])->name("site.carrinho.pagamento.cartao");
+Route::get('/carrinho/pagamento/boleto', [\App\Http\Controllers\CarrinhoController::class, 'pagamento_boleto'])->name("site.carrinho.pagamento.boleto");
+Route::get('/carrinho/identificacao', [\App\Http\Controllers\CarrinhoController::class, 'identificacao'])->name("site.carrinho-identificacao");
+Route::post('/carrinho/identificar', [\App\Http\Controllers\CarrinhoController::class, 'identificar'])->name("site.carrinho-identificar");
+Route::get('/carrinho/confirmacao', [\App\Http\Controllers\CarrinhoController::class, 'confirmacao'])->name("site.carrinho-confirmacao");
+Route::get('/carrinho/efetuar', [\App\Http\Controllers\CarrinhoController::class, 'efetuar'])->name("site.carrinho-efetuar");
+Route::post('/carrinho/finalizar/boleto', [\App\Http\Controllers\CarrinhoController::class, 'finalizar_boleto'])->name("site.carrinho.finalizar.boleto");
+Route::post('/carrinho/finalizar/credito/cielo', [\App\Http\Controllers\CieloController::class, 'finalizar_credito'])->name("site.carrinho.finalizar.credito.cielo");
+
+// ROTAS GERENCIANET
+Route::get('/carrinho/finalizar/boleto/gerencianet/{parcelas}', [\App\Http\Controllers\GerencianetController::class, 'boleto'])->name("site.carrinho.finalizar.boleto.gerencianet");
+
 
 Route::get('/minha-conta', [\App\Http\Controllers\SiteController::class, 'minhaConta'])->name("site.minha-conta");
 Route::post('/aluno/cadastrar', [\App\Http\Controllers\AlunosController::class, 'cadastrar'])->name("site.aluno.cadastrar");
@@ -58,6 +67,8 @@ Route::post('/api/click', [\App\Http\Controllers\AppController::class, 'click'])
 
 Route::get('/sistema/login', [\App\Http\Controllers\PainelController::class, 'login'])->name("painel.login");
 Route::post('/sistema/logar', [\App\Http\Controllers\PainelController::class, 'logar'])->name("painel.logar");
+
+Route::post('/gerencianet/notificacao', [\App\Http\Controllers\GerencianetController::class, 'notificacao'])->name("gerencianet.notificacao")->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);;
 
 Route::middleware(['admin'])->group(function () {
     
@@ -128,6 +139,8 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/sistema/configuracoes/contato/salvar', [\App\Http\Controllers\ConfiguracoesController::class, 'contato_salvar'])->name("painel.configuracoes.contato.salvar");
     Route::get('/sistema/configuracoes/seo', [\App\Http\Controllers\ConfiguracoesController::class, 'seo'])->name("painel.configuracoes.seo");
     Route::post('/sistema/configuracoes/seo/salvar/{pagina}', [\App\Http\Controllers\ConfiguracoesController::class, 'seo_salvar'])->name("painel.configuracoes.seo.salvar");
+    Route::get('/sistema/configuracoes/meios-pagamento', [\App\Http\Controllers\ConfiguracoesController::class, 'meios_pagamento'])->name("painel.configuracoes.meios-pagamento");
+    Route::post('/sistema/configuracoes/meios-pagamento/salvar', [\App\Http\Controllers\ConfiguracoesController::class, 'meios_pagamento_salvar'])->name("painel.configuracoes.meios-pagamento.salvar");
     
     // ROTAS DE CURSOS
     Route::get('/sistema/cursos/api/getCurso/{curso}', [\App\Http\Controllers\CursosController::class, 'getCurso']);
@@ -147,8 +160,13 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/includes/turma/formulario', function(){
         return view("painel.turmas.formulario");
     });
+
+    //ROTAS DE VENDAS
+    Route::get('/sistema/vendas', [\App\Http\Controllers\PagamentosController::class, 'vendas'])->name("painel.vendas");
     
-    
+    //ROTAS DE ALUNOS
+    Route::get('/sistema/alunos', [\App\Http\Controllers\AlunosController::class, 'consultar'])->name("painel.alunos");
+
     // ROTAS DE DESTAQUES
     Route::get('/sistema/destaques', [\App\Http\Controllers\DestaquesController::class, 'index'])->name("painel.destaques");
     Route::post('/sistema/destaques/cadastrar', [\App\Http\Controllers\DestaquesController::class, 'cadastrar'])->name("painel.destaque.cadastrar");
@@ -173,6 +191,9 @@ Route::middleware(['admin'])->group(function () {
     });
 
     
-
+    
+    Route::get('/teste', function(){
+        return view("site.teste");
+    });
     Route::get('/sistema/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')->name("painel.logs");
 });

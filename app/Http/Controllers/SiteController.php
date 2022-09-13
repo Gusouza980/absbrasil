@@ -11,6 +11,7 @@ use App\Models\Estadual;
 use App\Models\Visitas;
 use App\Models\DestaqueSuspenso;
 use App\Models\Curso;
+use App\Models\Aluno;
 
 class SiteController extends Controller
 {
@@ -78,23 +79,12 @@ class SiteController extends Controller
         return view("site.diretoria");
     }
 
-    public function pagamento(){
-        return view("site.carrinho-pagamento");
-    }
-    public function identificacao(){
-        return view("site.carrinho-identificacao");
-    }
-    public function confirmacao(){
-        return view("site.carrinho-confirmacao");
-    }
-    public function efetuar(){
-        return view("site.carrinho-efetuar");
-    }
     public function minhaArea(){
         return view("site.minha-area");
     }
     public function minhaAreaCompras(){
-        return view("site.minha-area-compras");
+        $aluno = Aluno::find(session()->get("aluno")["id"]);
+        return view("site.minha-area-compras", ["aluno" => $aluno]);
     }
     public function minhaAreaDados(){
         return view("site.minha-area-dados");
@@ -102,8 +92,6 @@ class SiteController extends Controller
     public function minhaAreaMatricula(){
         return view("site.minha-area-matricula");
     }
-
-
     
     public function estaduais(){
         $estaduais = Estadual::all();

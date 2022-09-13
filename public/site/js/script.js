@@ -9,8 +9,12 @@ const iflSlider = {
         let i = $(slider).find(".sliderItem");
         let w = i.outerWidth(true);
         let novo = 0;
+<<<<<<< HEAD
         if (idx == 1 || $(btn).hasClass("proximo"))
           novo = pre[0].scrollLeft + w;
+=======
+        if (idx == 1 || $(btn).hasClass("proximo")) novo = pre[0].scrollLeft + w;
+>>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790
         else novo = pre[0].scrollLeft - w;
         if ("scrollBehavior" in document.documentElement.style)
           pre[0].scroll({ left: novo, behavior: "smooth" });
@@ -45,8 +49,12 @@ const iflSlider = {
       let w = i.outerWidth(true);
       let sw = pre.outerWidth(true);
       if (sw < w) i.css("width", sw + "px");
+<<<<<<< HEAD
       if (pre[0].offsetWidth < corpo[0].offsetWidth)
         slider.find(".sliderBtn").css("opacity", "");
+=======
+      if (pre[0].offsetWidth < corpo[0].offsetWidth) slider.find(".sliderBtn").css("opacity", "");
+>>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790
       else slider.find(".sliderBtn").css("opacity", "0");
     }
   },
@@ -71,9 +79,14 @@ const backdrop = {
 };
 const wfform = {
   init: function () {
+<<<<<<< HEAD
     $("form .input").on(
       "focus, blur, keydown, change, select,textInput, input",
       (e) => wfform.valida(e.target)
+=======
+    $("form .input").on("focus, blur, keydown, change, select,textInput, input", (e) =>
+      wfform.valida(e.target)
+>>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790
     );
     $("form .input").blur((e) => wfform.blur(e.target));
     $("form .input").keydown((e) => wfform.keydown(e));
@@ -89,13 +102,18 @@ const wfform = {
         ifl1.formatador.soNumeros(i.value)
       );
     else if (i.name == "email")
+<<<<<<< HEAD
       valido = /^[^@ ]+@([^@ ]+[.][^@ ]+)+$/.test(
         ifl1.formatador.limpar(i.value)
       );
+=======
+      valido = /^[^@ ]+@([^@ ]+[.][^@ ]+)+$/.test(ifl1.formatador.limpar(i.value));
+>>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790
     else if (i.name == "cpf")
       valido = ifl1.validador.validar.cpf(ifl1.formatador.soNumeros(i.value));
     else if (i.name == "cep")
       valido = ifl1.validador.validar.cep(ifl1.formatador.soNumeros(i.value));
+<<<<<<< HEAD
     else if (
       i.name == "rg" ||
       i.name == "cidade" ||
@@ -108,12 +126,20 @@ const wfform = {
     else if (i.name == "sexo" || i.name == "uf") valido = i.value != -1;
     else if (i.name == "numero")
       valido = ifl1.formatador.soNumeros(i.value) != "";
+=======
+    else if (i.name == "rg" || i.name == "cidade" || i.name == "bairro" || i.name == "logradouro")
+      valido = ifl1.formatador.limpar(i.value).length > 3;
+    else if (i.name == "nascimento") valido = ifl1.formatador.soNumeros(i.value).length == 8;
+    else if (i.name == "sexo" || i.name == "uf") valido = i.value != -1;
+    else if (i.name == "numero") valido = ifl1.formatador.soNumeros(i.value) != "";
+>>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790
     else valido = true;
     if (valido) {
       l.classList.add("valido");
       l.classList.remove("invalido");
       if (i.name == "celular" || i.name == "telefone")
         fetch(
+<<<<<<< HEAD
           "https://brasilapi.com.br/api/ddd/v1/" +
             ifl1.formatador.soNumeros(i.value).substr(0, 2),
           { method: "GET", credentials: "omit", cache: "default" }
@@ -140,13 +166,34 @@ const wfform = {
               wfform.valida(
                 $(i.form).find('.input[name="logradouro"]').val(json.street)[0]
               );
+=======
+          "https://brasilapi.com.br/api/ddd/v1/" + ifl1.formatador.soNumeros(i.value).substr(0, 2),
+          { method: "GET", credentials: "omit", cache: "default" }
+        ).then((r) => r.json().then((json) => (i.dataset.uf = json.state)));
+      else if (i.name == "cep")
+        fetch("https://brasilapi.com.br/api/cep/v1/" + ifl1.formatador.soNumeros(i.value), {
+          method: "GET",
+          credentials: "omit",
+          cache: "default",
+        }).then((r) =>
+          r.json().then((json) => {
+            if (json.hasOwnProperty("state")) {
+              wfform.valida($(i.form).find('.input[name="uf"]').val(json.state)[0]);
+              wfform.valida($(i.form).find('.input[name="cidade"]').val(json.city)[0]);
+              wfform.valida($(i.form).find('.input[name="bairro"]').val(json.neighborhood)[0]);
+              wfform.valida($(i.form).find('.input[name="logradouro"]').val(json.street)[0]);
+>>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790
             } else {
               wfform.valida($(i.form).find('.input[name="uf"]').val("")[0]);
               wfform.valida($(i.form).find('.input[name="cidade"]').val("")[0]);
               wfform.valida($(i.form).find('.input[name="bairro"]').val("")[0]);
+<<<<<<< HEAD
               wfform.valida(
                 $(i.form).find('.input[name="logradouro"]').val("")[0]
               );
+=======
+              wfform.valida($(i.form).find('.input[name="logradouro"]').val("")[0]);
+>>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790
             }
           })
         );
@@ -166,6 +213,7 @@ const wfform = {
     if (i.name == "cep" || i.name == "complemento")
       $(i.form).find('.input[name="complemento"]').parent().addClass("valido");
     if (i.labels[0].classList.contains("valido")) {
+<<<<<<< HEAD
       if (
         i.name == "nome" ||
         i.name == "logradouro" ||
@@ -187,6 +235,16 @@ const wfform = {
         i.value = ifl1.formatador.digitado.cep(
           ifl1.formatador.soNumeros(i.value)
         );
+=======
+      if (i.name == "nome" || i.name == "logradouro" || i.name == "bairro" || i.name == "cidade")
+        i.value = ifl1.formatador.digitado.nome(ifl1.formatador.limpar(i.value));
+      else if (i.name == "celular" || i.name == "telefone")
+        i.value = ifl1.formatador.digitado.telefone(ifl1.formatador.soNumeros(i.value));
+      else if (i.name == "cpf")
+        i.value = ifl1.formatador.digitado.cpf(ifl1.formatador.soNumeros(i.value));
+      else if (i.name == "cep")
+        i.value = ifl1.formatador.digitado.cep(ifl1.formatador.soNumeros(i.value));
+>>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790
       else i.value = ifl1.formatador.limpar(i.value);
     }
   },
@@ -243,11 +301,16 @@ const wfform = {
           setTimeout(() => aviso.removeClass("exibe"), 10000);
           if (json.sucesso) {
             btn.form.reset();
+<<<<<<< HEAD
             $(btn.form)
               .find(".valido,.invalido")
               .removeClass("valido invalido");
             window.location.href =
               "/cadastro-concluido" + "?" + location.pathname.substr(1);
+=======
+            $(btn.form).find(".valido,.invalido").removeClass("valido invalido");
+            window.location.href = "/cadastro-concluido" + "?" + location.pathname.substr(1);
+>>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790
           }
         })
       );
@@ -257,8 +320,12 @@ const wfform = {
 const movel = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 $(function () {
   function ajustes() {
+<<<<<<< HEAD
     if (window.innerWidth > 1290)
       $("#blog .gradeBlog>div:nth-child(n+3)").addClass("magro");
+=======
+    if (window.innerWidth > 1290) $("#blog .gradeBlog>div:nth-child(n+3)").addClass("magro");
+>>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790
     else $("#blog .gradeBlog>div:nth-child(n+3)").removeClass("magro");
   }
 
@@ -294,6 +361,7 @@ $(function () {
     $("a.whatsapp").each(function () {
       $(this).attr("href", "https://web." + $(this).attr("href").substr(12));
     });
+<<<<<<< HEAD
 
   $("a.ancora").click((e) => {
     if (location.pathname == "/") {
@@ -347,4 +415,44 @@ $(".terms input").change(() => {
 
 $(".termsclose").click(() => {
   $(".termsBox").hide();
+=======
+
+  $("a.ancora").click((e) => {
+    if (location.pathname == "/") {
+      e.preventDefault();
+      let href = $(e.target).attr("href") || $(e.target).closest("a").attr("href");
+      if (
+        href.length >= location.pathname.length &&
+        href.substr(0, location.pathname.length) == location.pathname
+      )
+        href = href.substr(location.pathname.length);
+      const alvo = href[0] == "#" ? $("#" + href.substr(1)) : $("header");
+      $("html,body").animate({ scrollTop: alvo.offset().top - 50 }, 500);
+      return false;
+    }
+  });
+});
+
+$(window).on("load", function () {
+  // 	let debug=3;
+  // 	let viewPadrao='';
+  // 	ifl1.init.iniciar(debug,viewPadrao);
+  backdrop.esconde();
+  //if(window.innerWidth>=1440)setTimeout(()=>$('header nav').removeClass('sobe'),750);
+
+  if (location.hash != "") {
+    location.hash == "";
+    window.history.replaceState({}, "", "/");
+  }
+  let pathname = location.pathname;
+  if (pathname[pathname.length - 1] == "/") pathname = pathname.substr(0, pathname.length - 1); //remove "/" do fim do endereço
+  if (pathname.includes("%20")) pathname = pathname.split("%20").join("-"); //troca espaços por traços
+  if (pathname != location.pathname) window.history.replaceState({}, "", pathname); //efetiva correções, se necessário
+  wfform.init();
+});
+
+$(" section.s_detail .container-fav .card-button").click(() => {
+  $("section.s_detail .container-fav .card-area").toggleClass("active");
+  $(" section.s_detail .container-fav .card-button").toggleClass("active");
+>>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790
 });
