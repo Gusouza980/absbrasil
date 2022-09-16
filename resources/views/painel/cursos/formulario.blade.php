@@ -1,4 +1,5 @@
-<form id="form-edicao" class="dropzone" action="{{route('painel.curso.cadastrar')}}" method="post" enctype="multipart/form-data">
+<form id="form-edicao" class="dropzone" action="{{ route('painel.curso.cadastrar') }}" method="post"
+    enctype="multipart/form-data">
     @csrf
     <input type="hidden" name="curso_id" id="curso_id" value="">
     <div class="row">
@@ -8,7 +9,8 @@
                 <div class="card-body container-fluid">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <img id="banner-preview" src="{{asset('admin/images/thumb-padrao.png')}}" style="height: 200px; max-width: 100%;" alt="">
+                            <img id="banner-preview" src="{{ asset('admin/images/thumb-padrao.png') }}"
+                                style="height: 200px; max-width: 100%;" alt="">
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -26,7 +28,8 @@
                 <div class="card-body container-fluid">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <img id="miniatura-preview" src="{{asset('admin/images/thumb-padrao.png')}}" style="height: 200px; max-width: 100%;" alt="">
+                            <img id="miniatura-preview" src="{{ asset('admin/images/thumb-padrao.png') }}"
+                                style="height: 200px; max-width: 100%;" alt="">
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -42,9 +45,8 @@
     <div class="row">
         <div class="form-group col-12">
             <label for="titulo">Título</label>
-            <input type="text" class="form-control" name="titulo"
-                id="titulo" aria-describedby="helpId" maxlength="255" value="" required 
-            >
+            <input type="text" class="form-control" name="titulo" id="titulo" aria-describedby="helpId"
+                maxlength="255" value="" required>
         </div>
     </div>
     <hr>
@@ -54,25 +56,25 @@
                 <li class="nav-item">
                     <a class="nav-link active" data-bs-toggle="tab" href="#Detalhes" role="tab">
                         <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                        <span class="d-none d-sm-block">Detalhes</span> 
+                        <span class="d-none d-sm-block">Detalhes</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="tab" href="#Programacao" role="tab">
                         <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                        <span class="d-none d-sm-block">Programação</span> 
+                        <span class="d-none d-sm-block">Programação</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="tab" href="#Instrutores" role="tab">
                         <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                        <span class="d-none d-sm-block">Instrutores</span>   
+                        <span class="d-none d-sm-block">Instrutores</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="tab" href="#Local" role="tab">
                         <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                        <span class="d-none d-sm-block">Local</span>    
+                        <span class="d-none d-sm-block">Local</span>
                     </a>
                 </li>
             </ul>
@@ -137,11 +139,10 @@
             </div>
         </div>
     </div>
-    
+
     <div class="row mt-3">
         <div class="col-12 text-end">
-            <button type="submit"
-                class="btn btn-primary">Salvar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
         </div>
     </div>
 
@@ -149,22 +150,22 @@
 
 <script>
     var inp = document.getElementById('banner-upload');
-    inp.addEventListener('change', function(e){
+    inp.addEventListener('change', function(e) {
         var file = this.files[0];
         var reader = new FileReader();
-        reader.onload = function(){
+        reader.onload = function() {
             document.getElementById('banner-preview').src = this.result;
-            };
+        };
         reader.readAsDataURL(file);
-    },false);
+    }, false);
 
     var inp = document.getElementById('miniatura-upload');
-    inp.addEventListener('change', function(e){
+    inp.addEventListener('change', function(e) {
         var file = this.files[0];
         var reader = new FileReader();
-        reader.onload = function(){
+        reader.onload = function() {
             document.getElementById('miniatura-preview').src = this.result;
-            };
+        };
         reader.readAsDataURL(file);
-    },false);
+    }, false);
 </script>
