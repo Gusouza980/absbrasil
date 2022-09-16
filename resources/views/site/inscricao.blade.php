@@ -10,18 +10,20 @@
 
                 <h3 class="mt-4">Formulário de inscrição para o Concurso Brasileiro de Sommeliers – Edição 2022</h3>
 
-
+                @if(session()->get("erro"))
+                    <small class="" style="color: red;">{{ session()->get("erro") }}</small>
+                @endif
                 <form action="{{ route('site.inscricao.efetuar') }}" method="POST">
                     @csrf
 
                     <span>Nome Completo:</span>
                     <input type="text" class="form-control mb-3" name="nome" id="nome"
-                        placeholder="Informe o seu Nome" required>
+                        placeholder="Informe o seu Nome" maxlength="60" required>
 
 
                     <span>Seu e-mail: </span>
                     <input type="emaill" class="form-control mb-3" name="email" id="email"
-                        placeholder="Informe o e-mail" required>
+                        placeholder="Informe o e-mail" maxlength="60" required>
 
 
                     <span>Em qual ABS você deseja realizar a prova prática?</span>

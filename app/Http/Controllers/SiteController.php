@@ -13,6 +13,7 @@ use App\Models\DestaqueSuspenso;
 use App\Models\Curso;
 use App\Models\Aluno;
 use App\Classes\Email;
+use App\Models\InscricaoConcurso;
 
 class SiteController extends Controller
 {
@@ -178,8 +179,18 @@ class SiteController extends Controller
         $nome = $request->nome;
         $email = $request->email;
         $mensagem = "<b>Inscrição para Concurso</b><br><br><b>Nome: </b>$nome<br><b>Email: </b>$email<br><b>Unidade: </b>" . config("unidades.inscricoes")[$request->abs]["nome"] . "<br><b>Momento da Inscrição: </b>" . date("d/m/Y H:i:s");
-        Email::enviar($mensagem, "Inscrição em Concurso", config("unidades.inscricoes")[$request->abs]["email"], false);
-        return redirect()->route("site.inscricao_pagamento");
+        if(Email::enviar($mensagem, "Inscrição em Concurso", config("unidades.inscricoes")[$request->abs]["email"], false)){
+            $inscricao = new InscricaoConcurso;
+            $inscricao->nome = $request->nome;
+            $inscricao->email = $request->email;
+            $inscricao->unidade = config("unidades.inscricoes")[$request->abs]["nome"];
+            $inscricao->concurso = "Concurso Brasileiro de Sommeliers – Edição 2022";
+            $inscricao->save();
+            return redirect()->route("site.inscricao_pagamento");
+        }else{
+            session()->flash("erro", "Erro ao efetuar a inscrição. Tente novamente mais tarde");
+            return redirect()->back();
+        }
     }
 
     public function inscricao_pagamento(){
