@@ -190,6 +190,9 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/sistema/app/rede/salvar/{elemento}', [\App\Http\Controllers\AppController::class, 'salvar_rede'])->name("painel.app.rede.salvar");
     Route::get('/sistema/app/rede/remover/{elemento}', [\App\Http\Controllers\AppController::class, 'remover_rede'])->name("painel.app.rede.remover");
 
+    // INSCRICOES EM CONCURSOS
+    Route::get('/sistema/concursos/inscricoes', [\App\Http\Controllers\InscricoesConcursoController::class, 'consultar'])->name("painel.concursos.inscricoes");
+
     // ROTAS DE INCLUDES
     Route::get('/includes/loading', function(){
         return view("painel.includes.loading");
