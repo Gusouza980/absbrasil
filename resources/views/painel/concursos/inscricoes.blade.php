@@ -19,7 +19,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body" style="overflow-x: scroll;">
-                <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
+                <table id="datatable-buttons" class="table table-bordered dt-responsive  nowrap w-100">
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -53,6 +53,7 @@
 
 @section('scripts')
     <!-- Required datatable js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
     <script src="{{asset('admin/libs/datatables.net/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('admin/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
 
@@ -66,6 +67,7 @@
     <script src="{{asset('admin/libs/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
     <script src="{{asset('admin/libs/datatables.net-buttons/js/buttons.colVis.min.js')}}"></script>
 
+    <script src="https://cdn.datatables.net/plug-ins/1.10.10/sorting/datetime-moment.js"></script>
 
     <script>
         $(document).ready(function() {
