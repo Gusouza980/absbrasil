@@ -359,6 +359,15 @@ $usuario = \App\Models\Usuario::find(session()->get('usuario')['id']);
                         </li>
                         <li>
                             <a href="javascript: void(0);" class="waves-effect">
+                                <i class="bx bx-task" aria-hidden="true"></i>
+                                <span key="t-dashboards">Concursos</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{ route('painel.concursos.inscricoes') }}" key="t-default">Inscrições</a>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect">
                                 <i class="bx bx-slider-alt" aria-hidden="true"></i>
                                 <span key="t-dashboards">Administração</span>
                             </a>
