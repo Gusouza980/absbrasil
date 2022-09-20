@@ -10,7 +10,7 @@ class InscricoesConcursoController extends Controller
     //
 
     public function consultar(){
-        $inscricoes = InscricaoConcurso::orderBy("created_at", "DESC");
+        $inscricoes = InscricaoConcurso::orderBy("created_at", "DESC")->get();
         return view("painel.concursos.inscricoes", ["inscricoes" => $inscricoes]);
     }
 }
