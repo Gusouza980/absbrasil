@@ -1,16 +1,14 @@
-
 <head>
     <meta charset='utf-8'>
-    @if(isset($pagina))
-        <title>{{$pagina->titulo}}</title>
-        <meta name='keywords' content='{{$pagina->palavras}}'>
-        <meta name='description' content='{{$pagina->descricao}}'>
-        <meta property='og:title' content='{{$pagina->titulo}}'>
-        <meta property='og:site_name' content='{{$pagina->titulo}}'>
-        <meta name='twitter:title' content='{{$pagina->titulo}}'>
-        <meta property='og:description' content='{{$pagina->descricao}}'>
-        <meta name='twitter:description' content='{{$pagina->descricao}}'>
-        
+    @if (isset($pagina))
+        <title>{{ $pagina->titulo }}</title>
+        <meta name='keywords' content='{{ $pagina->palavras }}'>
+        <meta name='description' content='{{ $pagina->descricao }}'>
+        <meta property='og:title' content='{{ $pagina->titulo }}'>
+        <meta property='og:site_name' content='{{ $pagina->titulo }}'>
+        <meta name='twitter:title' content='{{ $pagina->titulo }}'>
+        <meta property='og:description' content='{{ $pagina->descricao }}'>
+        <meta name='twitter:description' content='{{ $pagina->descricao }}'>
     @else
         <title>Associação Brasileira de Sommeliers - Brasil</title>
         <meta name='keywords' content=''>
@@ -22,11 +20,11 @@
         <meta name='twitter:description' content=''>
     @endif
     <link rel='canonical' href='https://homolog.abs-brasil.com'>
-    
+
     <meta property='og:url' content='https://homolog.abs-brasil.com'>
     <meta http-equiv=Pragma content=no-cache>
     <meta http-equiv=Expires content=-1>
-    <meta http-equiv=CACHE-CONTROL content=NO-CACHE>    
+    <meta http-equiv=CACHE-CONTROL content=NO-CACHE>
     <meta name='theme-color' content='#8A143A'>
     <meta name='msapplication-navbutton-color' content='#8A143A'>
     <meta name='apple-mobile-web-app-status-bar-style' content='#8A143A'>
@@ -59,122 +57,119 @@
     <link rel='preload' type='application/javascript' as='script' href='https://code.jquery.com/jquery-3.5.1.min.js'
         integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous' />
     <link rel='preload' type='application/javascript' as='script' href='{{ asset('site/js/script.js') }}'>
-    
-    <link rel='preload' type='text/css' as='style' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous'/><link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous'>
-   
+
+    <link rel='preload' type='text/css' as='style'
+        href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous' />
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' crossorigin='anonymous'>
+
     <link rel='stylesheet'
         href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Lato&family=Roboto:wght@500&family=Spartan:wght@400;700&display=swap'
         crossorigin='anonymous'>
-    <link rel='stylesheet' href='{{ asset("site/css/reset.css") }}'>
-    <link rel='stylesheet' href='{{ asset("site/css/custom.css") }}'>
+    <link rel='stylesheet' href='{{ asset('site/css/reset.css') }}'>
+    <link rel='stylesheet' href='{{ asset('site/css/custom.css') }}'>
     <script src='https://code.jquery.com/jquery-3.5.1.min.js'
         integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous'></script>
 </head>
 
 <body class="form _minha-conta" style="overflow:hidden;">
-<header>
-      <div class="_half">
-        <div class="container-fav">
-          <div class="logos">
-            <a href="/">
-              <img src="{{asset('site/img/_logo136.png')}}" alt="Logo ABS Pernambuco" />
-            </a>
-            <img src="{{asset('site/img/_logoASI_136.png')}}" alt="Logo ASI" />
-          </div>
-          <a href="/" class="_back">
-            <div class="svg">
-              <img src="{{asset('site/img/arrowlong_left.svg')}}" alt="" />
-            </div>
-            <p>Voltar a página principal</p>
-          </a>
-          <div class="_text">
-            Nos envie uma mensagem!
-          </div>
-          <div class="_contact">
-            <div class="_c">
-              <div class="svg">
-                <img src="{{asset('site/img/WhatsappLogo.svg')}}" alt="" />
-                <span>xx 9999 9999</span>
-              </div>
-            </div>
-            <div class="_c">
-              <div class="svg">
-                <img src="{{asset('site/img/WhatsappLogo.svg')}}" alt="" />
-                <span>xx 9999 9999</span>
-              </div>
-            </div>
-            <div class="_c">
-              <div class="svg">
-                <img src="{{asset('site/img/email.svg')}}" alt="" />
-                <span>contato@abs-brasil.com.br</span>
-              </div>
-            </div>
-          </div>
+    <header>
+        <div class="_half">
+            <div class="container-fav">
+                <div class="logos">
+                    <a href="/">
+                        <img src="{{ asset('site/img/_logo136.png') }}" alt="Logo ABS Pernambuco" />
+                    </a>
+                    <img src="{{ asset('site/img/_logoASI_136.png') }}" alt="Logo ASI" />
+                </div>
+                <a href="/" class="_back">
+                    <div class="svg">
+                        <img src="{{ asset('site/img/arrowlong_left.svg') }}" alt="" />
+                    </div>
+                    <p>Voltar a página principal</p>
+                </a>
+                <div class="_text">
+                    Nos envie uma mensagem!
+                </div>
+                <div class="_contact">
+                    <div class="_c">
+                        <div class="svg">
+                            <img src="{{ asset('site/img/phone-solid.svg') }}" width="20" height="22"
+                                alt="Ícone telefone">
+                            <span>  (11) 95158-0544</span>
+                        </div>
+                    </div>
+                    <div class="_c">
+                        <div class="svg">
+                            <img src="{{ asset('site/img/WhatsappLogo.svg') }}" alt="" />
+                            <span>(11) 95158-0544</span>
+                        </div>
+                    </div>
+                    <div class="_c">
+                        <div class="svg">
+                            <img src="{{ asset('site/img/email.svg') }}" alt="" />
+                            <span>contato@abs-brasil.com.br</span>
+                        </div>
+                    </div>
+                </div>
 
-          <div class="_credit">
-            <p>Desenvolvido por</p>
-            <div class="logo7seven">
-              <a href="https://7seventrends.com">
-                <img src="{{asset('site/img/_logo7seven.png')}}" alt="" />
-              </a>
+                <div class="_credit">
+                    <p>Desenvolvido por</p>
+                    <div class="logo7seven">
+                        <a href="https://7seventrends.com">
+                            <img src="{{ asset('site/img/_logo7seven.png') }}" alt="" />
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
 
-      <div class="_otherhalf">
-        <div class="_sendmessage">
-          <div class="container-fav">
-          <div class="title">
-              <div class="svg">
-                <img src="https://abs-brasil.com/site/img/loginuser.svg" alt="">
-              </div>
-              <h2>Nos envie uma mensagem!</h2>
+        <div class="_otherhalf">
+            <div class="_sendmessage">
+                <div class="container-fav">
+                    <div class="title">
+                        <div class="svg">
+                            <img src="https://abs-brasil.com/site/img/loginuser.svg" alt="">
+                        </div>
+                        <h2>Nos envie uma mensagem!</h2>
+                    </div>
+                    <form action="">
+                        <label>
+                            <span>Nome</span>
+                            <input type="text" />
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input type="email" />
+                        </label>
+                        <label>
+                            <span>Telefone</span>
+                            <input type="tel" />
+                        </label>
+                        <label>
+                            <span>Cidade - UF</span>
+                            <input type="text" />
+                        </label>
+                        <label>
+                            <span>Digite sua mensagem</span>
+                            <textarea class=".textA" name="message" id="" cols="30" rows="10"></textarea>
+                        </label>
+
+                        <button>Enviar <img src="{{ asset('site/img/arrowlong.svg') }}" alt="" /></button>
+                    </form>
+                </div>
             </div>
-            <form action="">
-              <label>
-                <span>Nome</span>
-                <input type="text" />
-              </label>
-              <label>
-                <span>Email</span>
-                <input type="email" />
-              </label>
-              <label>
-                <span>Telefone</span>
-                <input type="tel" />
-              </label>
-              <label>
-                <span>Cidade - UF</span>
-                <input type="text" />
-              </label>
-              <label>
-                <span>Digite sua mensagem</span>
-                <textarea
-                  class=".textA"
-                  name="message"
-                  id=""
-                  cols="30"
-                  rows="10"
-                ></textarea>
-              </label>
-
-              <button>Enviar <img src="{{asset('site/img/arrowlong.svg')}}" alt="" /></button>
-            </form>
-          </div>
         </div>
-      </div>
     </header>
 
-    <script>        
-        $("form label input,form label textarea").focus(function () {
-        $(this).parent().find("span").addClass("active");
+    <script>
+        $("form label input,form label textarea").focus(function() {
+            $(this).parent().find("span").addClass("active");
         });
 
-        $("form label input,form label textarea").focusout(function () {
-        if ($(this).val() == "") {
-            $(this).parent().find("span").removeClass("active");
-        }
+        $("form label input,form label textarea").focusout(function() {
+            if ($(this).val() == "") {
+                $(this).parent().find("span").removeClass("active");
+            }
         });
     </script>
     <script src="{{ asset('site/js/script.js') }}"></script>
