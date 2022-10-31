@@ -43,7 +43,7 @@
                 <a href="{{ route('site.noticias') }}">Notícias do Vinho</a>
             </div>
             <div>
-                <a target="_blank" rel="noopener" title="Ver mapa" href="'.CONTATO_GMAPS.'"><img
+                <a target="_blank" rel="noopener" title="Ver mapa" href="https://goo.gl/maps/texyL6rYqoPMLJ8H9"><img
                         src="{{ asset('site/img/ico_user.svg') }}" width="20" height="22"
                         alt="Ícone usuário">{{ $configuracoes->rua . ', ' . $configuracoes->numero }} @if ($configuracoes->complemento)
                         {{ '- ' . $configuracoes->complemento }}
@@ -55,6 +55,13 @@
                 --><a target="_blank" rel="noopener" title="Email" href="mailto:{{ $configuracoes->email }}"><img
                         src="{{ asset('site/img/ico_envelope.svg') }}" width="25" height="25"
                         alt="Ícone envelope">{{ $configuracoes->email }}</a>
+
+                    <a target="_blank" rel="noopener" title="telefone" href="tel:11951580544"><img
+                            src="{{ asset('site/img/phone-solid.svg') }}" width="20" height="22"
+                            alt="Ícone telefone">(11) 95158-0544
+                    </a>
+                
+
             </div>
         </nav>
     </section>
@@ -77,11 +84,13 @@
 <script src="{{ asset('site/js/script.js') }}"></script>
 <script src="/_ifl1/ifl1formatador.js"></script>
 <script src="/_ifl1/ifl1validador.js"></script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+{{-- <<<<<<< HEAD --}}
+{{-- <<<<<<< HEAD --}}
+{{-- ======= --}}
 
     
->>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790
-=======
->>>>>>> 4a87e0a794c25815a0e76d74ad970b097d77a85b
+{{-- >>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790 --}}
+{{-- ======= --}}
+{{-- >>>>>>> 4a87e0a794c25815a0e76d74ad970b097d77a85b --}}
