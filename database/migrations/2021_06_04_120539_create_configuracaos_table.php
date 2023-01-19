@@ -46,7 +46,7 @@ class CreateConfiguracaosTable extends Migration
             'bairro' => 'Vila Olímpia',
             'cidade' => 'São Paulo',
             'estado' => 'SP',
-            'email' => 'contato@abs-brasil.com',
+            'email' => 'associacao.abs.brasil@gmail.com',
             'facebook' => 'https://www.facebook.com/ABS-Brasil-105852698310241',
             'instagram' => 'https://www.instagram.com/abs.brasil/',
             'youtube' => 'https://www.youtube.com/channel/UCjm6Wo9sSzg3L88oFicZvYg'

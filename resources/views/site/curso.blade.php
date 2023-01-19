@@ -48,7 +48,7 @@
                 </ol>
                 <p>1.1. &nbsp;As inscri&ccedil;&otilde;es dever&atilde;o ser feitas no site da ABS-Brasil, devendo a
                     documenta&ccedil;&atilde;o ser enviada para a para a secretaria da ABS-Brasil, pelo e-mail
-                    contato@abs-brasil.com.</p>
+                    associacao.abs.brasil@gmail.com</p>
                 <p>&nbsp;</p>
                 <p>1.2. S&oacute; ser&atilde;o admitidas inscri&ccedil;&otilde;es dos profissionais que se enquadrarem
                     nos seguintes requisitos:</p>

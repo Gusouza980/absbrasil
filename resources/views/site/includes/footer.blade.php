@@ -52,9 +52,9 @@
                 </a>
                 <!--<a target="_blank" rel="noopener" title="Telefone" href="tel:{{ $configuracoes->telefone }}"><img src="{{ asset('site/img/ico_fone.svg') }}" width="25" height="25" alt="Ícone Telefone">{{ $configuracoes->telefone }}</a>
                 <a class="whatsapp" target="_blank" rel="noopener" title="WhatsApp" href="https://api.whatsapp.com/send?phone=55{{ $configuracoes->whatsapp }}"><img src="{{ asset('site/img/ico_whats.svg') }}" width="27" height="27" alt="Ícone WhatsApp">{{ $configuracoes->whatsapp }}</a>
-                --><a target="_blank" rel="noopener" title="Email" href="mailto:{{ $configuracoes->email }}"><img
+                --><a target="_blank" rel="noopener" title="Email" href="mailto:associacao.abs.brasil@gmail.com"><img
                         src="{{ asset('site/img/ico_envelope.svg') }}" width="25" height="25"
-                        alt="Ícone envelope">{{ $configuracoes->email }}</a>
+                        alt="Ícone envelope">associacao.abs.brasil@gmail.com</a>
 
                     <a target="_blank" rel="noopener" title="telefone" href="tel:11951580544"><img
                             src="{{ asset('site/img/phone-solid.svg') }}" width="20" height="22"

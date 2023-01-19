@@ -107,7 +107,7 @@
                     <div class="_c">
                         <div class="svg">
                             <img src="{{ asset('site/img/email.svg') }}" alt="" />
-                            <span>contato@abs-brasil.com.br</span>
+                            <span>associacao.abs.brasil@gmail.com</span>
                         </div>
                     </div>
                 </div>
