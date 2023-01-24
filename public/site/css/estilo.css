@@ -2893,15 +2893,37 @@ body>footer.footer>section#banner>div:last-child .btn a img {
 }
 
 body>footer.footer>section#links>nav {
-    display: grid;
-    grid-gap: var(--margem);
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* display: grid; */
+    /* grid-gap: var(--margem);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+    body>footer.footer>section#links>nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    body>footer.footer>section#links h3 {
+        text-align: center;
+    }
 }
 
 body>footer.footer>section#links>nav a {
-    height: 48px;
+    height: 60px;
     display: flex;
     align-items: center;
+}
+
+body>footer.footer>section#links>nav a.margin-t {
+    margin-top: 20px;
+}
+
+body>footer.footer>section#links>nav a.margin-t:first-child {
+    margin-top: 0;
 }
 
 body>footer.footer>section#links>nav a img {

@@ -43,12 +43,18 @@
                 <a href="{{ route('site.noticias') }}">Notícias do Vinho</a>
             </div>
             <div>
-                <a target="_blank" rel="noopener" title="Ver mapa" href="https://goo.gl/maps/texyL6rYqoPMLJ8H9"><img
-                        src="{{ asset('site/img/ico_user.svg') }}" width="20" height="22"
-                        alt="Ícone usuário">{{ $configuracoes->rua . ', ' . $configuracoes->numero }} @if ($configuracoes->complemento)
-                        {{ '- ' . $configuracoes->complemento }}
-                    @endif - {{ $configuracoes->bairro }} <br> {{ $configuracoes->cidade }} -
-                    {{ $configuracoes->estado }}
+                <a class="margin-t" target="_blank" rel="noopener" title="Ver mapa" href="https://goo.gl/maps/texyL6rYqoPMLJ8H9"><img
+                        src="{{ asset('site/img/ico_map.svg') }}" width="20" height="22"
+                        alt="Ícone usuário"><span><u>Sede Administrativa:</u> {{ $configuracoes->rua . ', ' . $configuracoes->numero }} @if ($configuracoes->complemento)
+                            {{ '- ' . $configuracoes->complemento }}
+                        @endif - {{ $configuracoes->bairro }} <br> {{ $configuracoes->cidade }} -
+                        {{ $configuracoes->estado }}</span>
+                </a>
+                <a  class="margin-t" target="_blank" rel="noopener" title="Ver mapa" href="https://goo.gl/maps/texyL6rYqoPMLJ8H9"><img
+                        src="{{ asset('site/img/ico_map.svg') }}" width="20" height="22"
+                        alt="Ícone usuário">
+                        <span><u>Sede Social:</u> Praia do Flamengo, 66 – Bloco B – Sala 311 - Flamengo - Rio de
+                            Janeiro - RJ</span>
                 </a>
                 <!--<a target="_blank" rel="noopener" title="Telefone" href="tel:{{ $configuracoes->telefone }}"><img src="{{ asset('site/img/ico_fone.svg') }}" width="25" height="25" alt="Ícone Telefone">{{ $configuracoes->telefone }}</a>
                 <a class="whatsapp" target="_blank" rel="noopener" title="WhatsApp" href="https://api.whatsapp.com/send?phone=55{{ $configuracoes->whatsapp }}"><img src="{{ asset('site/img/ico_whats.svg') }}" width="27" height="27" alt="Ícone WhatsApp">{{ $configuracoes->whatsapp }}</a>
@@ -56,11 +62,11 @@
                         src="{{ asset('site/img/ico_envelope.svg') }}" width="25" height="25"
                         alt="Ícone envelope">associacao.abs.brasil@gmail.com</a>
 
-                    <a target="_blank" rel="noopener" title="telefone" href="tel:11951580544"><img
-                            src="{{ asset('site/img/phone-solid.svg') }}" width="20" height="22"
-                            alt="Ícone telefone">(11) 95158-0544
-                    </a>
-                
+                <a target="_blank" rel="noopener" title="telefone" href="tel:11951580544"><img
+                        src="{{ asset('site/img/phone-solid.svg') }}" width="20" height="22"
+                        alt="Ícone telefone">(11) 95158-0544
+                </a>
+
 
             </div>
         </nav>
@@ -73,9 +79,10 @@
             <p>© 2021 ABS - Associação Brasileira de Sommeliers - Brasil</p>
         </div>
         <div>
-            <p>Desenvolvido por <a href="https://7seventrends.com" title="Clique para visitar o site da 7 Seven Trends"
-                    target="_blank" rel="nofollow noopener"><img width="68" height="16"
-                        src="{{ asset('site/img/logo_7seven.svg') }}" alt="7Seven Trends"></a></p>
+            <p>Desenvolvido por <a href="https://7seventrends.com"
+                    title="Clique para visitar o site da 7 Seven Trends" target="_blank" rel="nofollow noopener"><img
+                        width="68" height="16" src="{{ asset('site/img/logo_7seven.svg') }}"
+                        alt="7Seven Trends"></a></p>
         </div>
     </section>
 </footer>
@@ -90,7 +97,7 @@
 {{-- <<<<<<< HEAD --}}
 {{-- ======= --}}
 
-    
+
 {{-- >>>>>>> c0092c91a3522bf7aae6a4b7699e8e4518ac0790 --}}
 {{-- ======= --}}
 {{-- >>>>>>> 4a87e0a794c25815a0e76d74ad970b097d77a85b --}}

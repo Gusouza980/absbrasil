@@ -1,39 +1,33 @@
 @include('site.includes.head')
+
 <body class="home" style="overflow:hidden;">
     @include('site.includes.bodyHeader', [
-        "classe" => "brasil",
-        "adicional" => '<h2>Seja um Sommelier</h2>
-        <!--<p>Com nossos cursos online você poderá identificar o vinho pela safra e mostrar que saber de vinho é fundamental.</p>-->
-        <!--<div class="nums">
-            <a target="_blank" rel="noopener" title="Navegar curso" href="' . route('site.cursos') . '">
-                <h3>01</h3>
-                <p>Aguardem - Vem novidades! </p>
-            </a>
-            <a target="_blank" rel="noopener" title="Navegar curso" href="' . route('site.cursos') . '">
-                <h3>02</h3>
-                <p>Curso de Introdução em Coquetelaria - Online</p>
-            </a>
-            <a target="_blank" rel="noopener" title="Navegar curso" href="' . route('site.cursos') . '">
-                <h3>01</h3>
-                <p>Aguardem - Vem novidades!  On-line</p>
-            </a>
-        </div>-->
-        <div class="curso">
-            <img src="' . asset('site/img/curso1.jpg') . '" width="328" height="192px" alt="Imagem curso Header">
-            <div style="display: flex; flex-direction: column;">
-                <p>Aguardem - Vem novidades!  -</p>
-                <h3>On-line</h3>
-                <h4><!--10x <span>R$</span>550<span>,00</span>--> <span>R$ Aguardem!</span> </h4>
-                <a href="' . route('site.minha-conta') . '">EM BREVE TURMAS</a>
-                <div class="mt-3 d-flex align-items-center align-content-center justify-content-between">
-                    <p><img src="' . asset('site/img/ico_alarme.svg') . '" width="20" height="20" alt="Ícone despertador">Em breve</p>
-                    <p><img src="' . asset('site/img/ico_calendario.svg') . '" width="18" height="20" alt="Ícone calendário">Em breve</p>
-                </div>
-            </div>
-        </div>'    
+        'classe' => 'brasil',
+        'adicional' =>
+            '<h2>Seja um Sommelier</h2>
+            <!--<p>Com nossos cursos online você poderá identificar o vinho pela safra e mostrar que saber de vinho é fundamental.</p>--><!--<div class="nums">
+                <a target="_blank" rel="noopener" title="Navegar curso" href="' .
+            route('site.cursos') .
+            '">
+                    <h3>01</h3>
+                    <p>Aguardem - Vem novidades! </p>
+                </a>
+                <a target="_blank" rel="noopener" title="Navegar curso" href="' .
+            route('site.cursos') .
+            '">
+                    <h3>02</h3>
+                    <p>Curso de Introdução em Coquetelaria - Online</p>
+                </a>
+                <a target="_blank" rel="noopener" title="Navegar curso" href="' .
+            route('site.cursos') .
+            '">
+                    <h3>01</h3>
+                    <p>Aguardem - Vem novidades!  On-line</p>
+                </a>
+            </div>-->',
     ])
     <main class="main">
-        <section id="agenda">
+        {{-- <section id="agenda">
             <div class="maxSec">
                 <img class="taca" src="{{ asset('site/img/tacas.svg') }}" width="439" height="199"
                     alt="Taças desenhadas em uma linha">
@@ -88,7 +82,7 @@
                 </div>
                 <a href="{{route('site.cursos')}}" class="btn">Ver agenda completa</a>
             </div>
-        </section>
+        </section> --}}
         <section id="quem-somos" class="fundo">
             <div class="grid">
                 <div class="intro">
@@ -100,11 +94,8 @@
                 <img src="{{ asset('site/img/quem-somos-mv.jpg') }}" width="298" height="408" alt="Moça vinhos">
                 <div>
                     <div>
-                        <h2 class="traco">Nossos Cursos</h2>
-                        <p>A ABS-Brasil oferece ampla gama de cursos para profissionais e apreciadores do vinho e outras
-                            bebidas.</p>
-                        <a href="{{route('site.cursos')}}">Ver cursos</a>
-                    </div>
+                        <h2 class="traco"></h2>
+                        
                     <div>
                     </div>
         </section>
@@ -113,79 +104,97 @@
                 <div>
                     <div class="sliderPreCorpo" style="height:505px;">
                         <div class="gradeBlog sliderCorpo">
-                            @if(isset($destaques[0]))
+                            @if (isset($destaques[0]))
                                 <div class="sliderItem">
-                                    <a href="{{route('site.noticia', ['categoria' => $destaques[0]->categoria->slug, 'noticia' => $destaques[0]->slug])}}">
-                                        <img width="370" height="191" src="{{asset($destaques[0]->preview)}}"
+                                    <a
+                                        href="{{ route('site.noticia', ['categoria' => $destaques[0]->categoria->slug, 'noticia' => $destaques[0]->slug]) }}">
+                                        <img width="370" height="191" src="{{ asset($destaques[0]->preview) }}"
                                             alt="Ilustra Blog 1">
                                         <p class="info">
-                                            <img width="18" height="19" src="{{ asset('site/img/ico_calendar.svg') }}"
-                                                alt="Icone calendário">{{date("d/m/y", strtotime($destaques[0]->publicacao))}}
+                                            <img width="18" height="19"
+                                                src="{{ asset('site/img/ico_calendar.svg') }}"
+                                                alt="Icone calendário">{{ date('d/m/y', strtotime($destaques[0]->publicacao)) }}
                                         </p>
                                     </a>
-                                    <a class="tag" href="{{route('site.noticias', ['slug' => $destaques[0]->categoria->slug])}}">{{$destaques[0]->categoria->nome}}</a>
-                                    <h3><a href="{{route('site.noticia', ['categoria' => $destaques[0]->categoria->slug, 'noticia' => $destaques[0]->slug])}}" class="blogItem">{{$destaques[0]->titulo}}</a></h3>
+                                    <a class="tag"
+                                        href="{{ route('site.noticias', ['slug' => $destaques[0]->categoria->slug]) }}">{{ $destaques[0]->categoria->nome }}</a>
+                                    <h3><a href="{{ route('site.noticia', ['categoria' => $destaques[0]->categoria->slug, 'noticia' => $destaques[0]->slug]) }}"
+                                            class="blogItem">{{ $destaques[0]->titulo }}</a></h3>
                                     <p class="texto">
-                                        <a href="{{route('site.noticia', ['categoria' => $destaques[0]->categoria->slug, 'noticia' => $destaques[0]->slug])}}">
-                                            {{$destaques[0]->resumo}}
+                                        <a
+                                            href="{{ route('site.noticia', ['categoria' => $destaques[0]->categoria->slug, 'noticia' => $destaques[0]->slug]) }}">
+                                            {{ $destaques[0]->resumo }}
                                         </a>
                                     </p>
                                 </div>
                             @endif
-                            @if(isset($destaques[1]))
+                            @if (isset($destaques[1]))
                                 <div class="sliderItem">
-                                    <a href="{{route('site.noticia', ['categoria' => $destaques[1]->categoria->slug, 'noticia' => $destaques[1]->slug])}}">
-                                        <img width="370" height="191" src="{{asset($destaques[1]->preview)}}"
+                                    <a
+                                        href="{{ route('site.noticia', ['categoria' => $destaques[1]->categoria->slug, 'noticia' => $destaques[1]->slug]) }}">
+                                        <img width="370" height="191" src="{{ asset($destaques[1]->preview) }}"
                                             alt="Ilustra Blog 1">
                                         <p class="info">
-                                            <img width="18" height="19" src="{{ asset('site/img/ico_calendar.svg') }}"
-                                                alt="Icone calendário">{{date("d/m/y", strtotime($destaques[1]->publicacao))}}
+                                            <img width="18" height="19"
+                                                src="{{ asset('site/img/ico_calendar.svg') }}"
+                                                alt="Icone calendário">{{ date('d/m/y', strtotime($destaques[1]->publicacao)) }}
                                         </p>
                                     </a>
-                                    <a class="tag" href="{{route('site.noticias', ['slug' => $destaques[1]->categoria->slug])}}">{{$destaques[1]->categoria->nome}}</a>
-                                    <h3><a href="{{route('site.noticia', ['categoria' => $destaques[1]->categoria->slug, 'noticia' => $destaques[1]->slug])}}" class="blogItem">{{$destaques[1]->titulo}}</a></h3>
+                                    <a class="tag"
+                                        href="{{ route('site.noticias', ['slug' => $destaques[1]->categoria->slug]) }}">{{ $destaques[1]->categoria->nome }}</a>
+                                    <h3><a href="{{ route('site.noticia', ['categoria' => $destaques[1]->categoria->slug, 'noticia' => $destaques[1]->slug]) }}"
+                                            class="blogItem">{{ $destaques[1]->titulo }}</a></h3>
                                     <p class="texto">
-                                        <a href="{{route('site.noticia', ['categoria' => $destaques[1]->categoria->slug, 'noticia' => $destaques[1]->slug])}}">
-                                            {{$destaques[1]->resumo}}
+                                        <a
+                                            href="{{ route('site.noticia', ['categoria' => $destaques[1]->categoria->slug, 'noticia' => $destaques[1]->slug]) }}">
+                                            {{ $destaques[1]->resumo }}
                                         </a>
                                     </p>
                                 </div>
                             @endif
-                            @if(isset($destaques[2]))
+                            @if (isset($destaques[2]))
                                 <div class="sliderItem magro">
-                                    <a href="{{route('site.noticia', ['categoria' => $destaques[2]->categoria->slug, 'noticia' => $destaques[2]->slug])}}">
-                                        <img width="370" height="191" src="{{asset($destaques[2]->preview)}}"
+                                    <a
+                                        href="{{ route('site.noticia', ['categoria' => $destaques[2]->categoria->slug, 'noticia' => $destaques[2]->slug]) }}">
+                                        <img width="370" height="191" src="{{ asset($destaques[2]->preview) }}"
                                             alt="Ilustra Blog 1">
 
                                         <p class="info">
-                                            <img width="18" height="19" src="{{ asset('site/img/ico_calendar.svg') }}"
-                                                alt="Icone calendário">{{date("d/m/y", strtotime($destaques[2]->publicacao))}}
+                                            <img width="18" height="19"
+                                                src="{{ asset('site/img/ico_calendar.svg') }}"
+                                                alt="Icone calendário">{{ date('d/m/y', strtotime($destaques[2]->publicacao)) }}
                                         </p>
                                     </a>
-                                    <a class="tag" href="{{route('site.noticias', ['slug' => $destaques[2]->categoria->slug])}}">{{$destaques[2]->categoria->nome}}</a>
-                                    <h3><a href="{{route('site.noticia', ['categoria' => $destaques[2]->categoria->slug, 'noticia' => $destaques[2]->slug])}}" class="blogItem">{{$destaques[2]->titulo}}</a></h3>
+                                    <a class="tag"
+                                        href="{{ route('site.noticias', ['slug' => $destaques[2]->categoria->slug]) }}">{{ $destaques[2]->categoria->nome }}</a>
+                                    <h3><a href="{{ route('site.noticia', ['categoria' => $destaques[2]->categoria->slug, 'noticia' => $destaques[2]->slug]) }}"
+                                            class="blogItem">{{ $destaques[2]->titulo }}</a></h3>
                                     <!-- <p class="texto">
-                                        <a href="{{route('site.noticia', ['categoria' => $destaques[2]->categoria->slug, 'noticia' => $destaques[2]->slug])}}">
-                                            {{$destaques[2]->resumo}}
+                                        <a href="{{ route('site.noticia', ['categoria' => $destaques[2]->categoria->slug, 'noticia' => $destaques[2]->slug]) }}">
+                                            {{ $destaques[2]->resumo }}
                                         </a>
                                     </p> -->
                                 </div>
                             @endif
-                            @if(isset($destaques[3]))
+                            @if (isset($destaques[3]))
                                 <div class="sliderItem magro">
-                                    <a href="{{route('site.noticia', ['categoria' => $destaques[3]->categoria->slug, 'noticia' => $destaques[3]->slug])}}">
-                                        <img width="370" height="191" src="{{asset($destaques[3]->preview)}}"
+                                    <a
+                                        href="{{ route('site.noticia', ['categoria' => $destaques[3]->categoria->slug, 'noticia' => $destaques[3]->slug]) }}">
+                                        <img width="370" height="191" src="{{ asset($destaques[3]->preview) }}"
                                             alt="Ilustra Blog 1">
                                         <p class="info">
-                                            <img width="18" height="19" src="{{ asset('site/img/ico_calendar.svg') }}"
-                                                alt="Icone calendário">{{date("d/m/y", strtotime($destaques[3]->publicacao))}}
+                                            <img width="18" height="19"
+                                                src="{{ asset('site/img/ico_calendar.svg') }}"
+                                                alt="Icone calendário">{{ date('d/m/y', strtotime($destaques[3]->publicacao)) }}
                                         </p>
                                     </a>
-                                    <a class="tag" href="{{route('site.noticias', ['slug' => $destaques[3]->categoria->slug])}}">{{$destaques[3]->categoria->nome}}</a>
-                                    <h3><a href="{{route('site.noticia', ['categoria' => $destaques[3]->categoria->slug, 'noticia' => $destaques[3]->slug])}}" class="blogItem">{{$destaques[3]->titulo}}</a></h3>
+                                    <a class="tag"
+                                        href="{{ route('site.noticias', ['slug' => $destaques[3]->categoria->slug]) }}">{{ $destaques[3]->categoria->nome }}</a>
+                                    <h3><a href="{{ route('site.noticia', ['categoria' => $destaques[3]->categoria->slug, 'noticia' => $destaques[3]->slug]) }}"
+                                            class="blogItem">{{ $destaques[3]->titulo }}</a></h3>
                                     <!-- <p class="texto">
-                                        <a href="{{route('site.noticia', ['categoria' => $destaques[3]->categoria->slug, 'noticia' => $destaques[3]->slug])}}">
-                                            {{$destaques[3]->resumo}}
+                                        <a href="{{ route('site.noticia', ['categoria' => $destaques[3]->categoria->slug, 'noticia' => $destaques[3]->slug]) }}">
+                                            {{ $destaques[3]->resumo }}
                                         </a>
                                     </p> -->
                                 </div>
@@ -212,20 +221,23 @@
             <div class="direita">
                 <div class="caixas">
                     <div>
-                        <img src="{{ asset('site/img/ico_tacas.svg') }}" width="58" height="58" alt="Taças">
+                        <img src="{{ asset('site/img/ico_tacas.svg') }}" width="58" height="58"
+                            alt="Taças">
                         <p><span class="grande">38</span>anos de história</p>
                     </div>
                     <div>
-                        <img src="{{ asset('site/img/ico_globo.svg') }}" width="51" height="51" alt="Pessoas globo">
+                        <img src="{{ asset('site/img/ico_globo.svg') }}" width="51" height="51"
+                            alt="Pessoas globo">
                         <p><span>10</span>ABS Estaduais</p>
                     </div>
                     <div>
-                        <img src="{{ asset('site/img/ico_livros.svg') }}" width="50" height="50" alt="Livros">
+                        <img src="{{ asset('site/img/ico_livros.svg') }}" width="50" height="50"
+                            alt="Livros">
                         <p><span>1</span>Curso</p>
                     </div>
                 </div>
                 <h2>Fonte de formação de sommeliers profissionais do país</h2>
-                <a href="{{route('site.quem_somos')}}" class="botao">Quem somos</a>
+                <a href="{{ route('site.quem_somos') }}" class="botao">Quem somos</a>
             </div>
         </section>
         <section id="sommelierHome" class="fundo">
@@ -255,38 +267,42 @@
                     height="647">
                 <div class="cidades">
                     <h2 class="traco">Onde estamos</h2>
-                    @foreach(\App\Models\Estadual::all() as $estadual)
-                        <a href="{{route('site.estadual', ['slug' => $estadual->slug])}}">{{$estadual->nome}}</a>
+                    @foreach (\App\Models\Estadual::all() as $estadual)
+                        <a href="{{ route('site.estadual', ['slug' => $estadual->slug]) }}">{{ $estadual->nome }}</a>
                     @endforeach
-                    
+
                 </div>
             </div>
         </section>
         <hr>
         <section id="apoio">
             <nav>
-            <a href="https://7seventrends.com">
-            <img style="filter: contrast(0) brightness();" src="https://homolog.abs-brasil.com/site/img/logo_7seven.svg" alt="7Seven Trends" width="200"> </a> 
+                <a href="https://7seventrends.com">
+                    <img style="filter: contrast(0) brightness();"
+                        src="https://homolog.abs-brasil.com/site/img/logo_7seven.svg" alt="7Seven Trends"
+                        width="200"> </a>
             </nav>
         </section>
     </main>
     @include('site.includes.footer')
     <!-- Modal -->
-    @if(isset($destaque_suspenso))
-        <div class="modal fade" id="modalDestaque" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    @if (isset($destaque_suspenso))
+        <div class="modal fade" id="modalDestaque" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header modal-header-destaque">
-                        <h5 class="modal-title">{{$destaque_suspenso->titulo}}</h5>
-                            <button type="button" class="close close-destaque" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                        <h5 class="modal-title">{{ $destaque_suspenso->titulo }}</h5>
+                        <button type="button" class="close close-destaque" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="modal-body px-0 pt-0">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-12 px-0">
-                                    <img src="{{asset($destaque_suspenso->imagem)}}" style="width: 100%;" alt="">
+                                    <img src="{{ asset($destaque_suspenso->imagem) }}" style="width: 100%;"
+                                        alt="">
                                 </div>
                             </div>
                             <div class="row">
@@ -295,13 +311,13 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
         <script>
-            $(document).ready(function(){
+            $(document).ready(function() {
                 $("#modalDestaque").modal();
             });
         </script>
