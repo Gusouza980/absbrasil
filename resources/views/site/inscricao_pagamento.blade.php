@@ -12,9 +12,9 @@
                 <p>Clique no botão para realizar o pagamento.</p>
 
                 <a class="mt-5"
-                    href="https://pagamento.gerencianet.com.br/botao-de-pagamento/a358f196-aa4c-49cf-9b5d-755b6bbb6e01"
+                    href=""
                     target="_blank">
-                    <img src="https://pagamento.gerencianet.com.br/button-gradient-md-723146-Comprar-cash.svg">
+                    <img src="">
                 </a>
             </div>
         </div>

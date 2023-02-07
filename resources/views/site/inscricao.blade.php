@@ -8,7 +8,7 @@
             <div class="formulario__area" style="text-align: center;">
                 <img src="{{ asset('site/img/logo128.png') }}" alt="">
 
-                <h3 class="mt-4">Formulário de inscrição para o Concurso Brasileiro de Sommeliers – Edição 2022</h3>
+                <h3 class="mt-4">Diploma de Sommelier ASI 2023</h3>
 
                 @if(session()->get("erro"))
                     <small class="" style="color: red;">{{ session()->get("erro") }}</small>
