@@ -14,7 +14,7 @@
                 <a class="mt-5"
                     href="https://pagamento.gerencianet.com.br/botao-de-pagamento/05378e88-4548-4215-bb22-40f04ec3c81f"
                     target="_blank">
-                    <img src="https://pagamento.gerencianet.com.br/botao-de-pagamento/05378e88-4548-4215-bb22-40f04ec3c81f">
+                    <img src="https://pagamento.gerencianet.com.br/button-gradient-md-723146-Comprar-cash.svg">
                 </a>
             </div>
         </div>
