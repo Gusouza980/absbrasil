@@ -12,9 +12,9 @@
                 <p>Clique no botão para realizar o pagamento.</p>
 
                 <a class="mt-5"
-                    href=""
+                    href="https://pagamento.gerencianet.com.br/botao-de-pagamento/05378e88-4548-4215-bb22-40f04ec3c81f"
                     target="_blank">
-                    <img src="">
+                    <img src="https://pagamento.gerencianet.com.br/botao-de-pagamento/05378e88-4548-4215-bb22-40f04ec3c81f">
                 </a>
             </div>
         </div>
