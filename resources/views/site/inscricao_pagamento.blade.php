@@ -2,7 +2,7 @@
 
 <body>
 
-    <div class="container-fluid pb-4">
+    <div class="container-fluid pb-4" style="margin-top: 200px;>
         <div class="container py-5" style=" max-width: 400px">
 
             <div class="formulario__area" style="text-align: center;">

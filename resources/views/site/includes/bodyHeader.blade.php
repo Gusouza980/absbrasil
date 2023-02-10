@@ -42,7 +42,7 @@
         <nav>
             <div class="menuHeader">
                 <a href="{{ route('site.cursos') }}"
-                    @if (url()->current() == route('site.cursos')) class="ativo" @endif>Concurso</a>
+                    @if (url()->current() == route('site.cursos')) class="ativo" @endif>Exames</a>
                 <a href="{{ route('site.quem_somos') }}" @if (url()->current() == route('site.quem_somos')) class="ativo" @endif>ABS
                     Brasil</a>
                 <a href="{{ route('site.estaduais') }}" @if (url()->current() == route('site.estaduais')) class="ativo" @endif>ABS

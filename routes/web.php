@@ -16,11 +16,11 @@ Route::get('/testes', [\App\Http\Controllers\CieloController::class, 'capturar']
 
 Route::get('/', [\App\Http\Controllers\SiteController::class, 'index'])->name("site.index");
 Route::get('/quem-somos', [\App\Http\Controllers\SiteController::class, 'quem_somos'])->name("site.quem_somos");
-Route::get('/cursos', [\App\Http\Controllers\SiteController::class, 'cursos'])->name("site.cursos");
-Route::get('/curso/{slug}', [\App\Http\Controllers\SiteController::class, 'curso'])->name("site.curso");
-Route::get('/curso/{slug}/instrutores', [\App\Http\Controllers\SiteController::class, 'instrutores'])->name("site.curso.instrutores");
-Route::get('/curso/{slug}/local', [\App\Http\Controllers\SiteController::class, 'local'])->name("site.curso.local");
-Route::get('/curso/{slug}/programacao', [\App\Http\Controllers\SiteController::class, 'programacao'])->name("site.curso.programacao");
+Route::get('/exames', [\App\Http\Controllers\SiteController::class, 'cursos'])->name("site.cursos");
+Route::get('/exame/{slug}', [\App\Http\Controllers\SiteController::class, 'curso'])->name("site.curso");
+Route::get('/exame/{slug}/instrutores', [\App\Http\Controllers\SiteController::class, 'instrutores'])->name("site.curso.instrutores");
+Route::get('/exame/{slug}/local', [\App\Http\Controllers\SiteController::class, 'local'])->name("site.curso.local");
+Route::get('/exame/{slug}/programacao', [\App\Http\Controllers\SiteController::class, 'programacao'])->name("site.curso.programacao");
 Route::get('/contato', [\App\Http\Controllers\SiteController::class, 'contato'])->name("site.contato");
 Route::post('/contato/salvar', [\App\Http\Controllers\MensagemController::class, 'salvar'])->name("site.contato.salvar");
 // Route::get('/cadastro', [\App\Http\Controllers\SiteController::class, 'cadastro'])->name("site.cadastro");

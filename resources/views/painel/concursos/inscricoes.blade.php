@@ -25,7 +25,7 @@
                             <th>Nome</th>
                             <th>Email</th>
                             <th>Unidade</th>
-                            <th>Concurso</th>
+                            <th>Exames</th>
                             <th>Data de Inscrição</th>
                         </tr>
                     </thead>

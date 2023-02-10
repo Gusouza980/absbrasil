@@ -10,7 +10,7 @@
     <main class="main">
         <section id="cursos">
             <div class="texto">
-                <h1>Concurso</h1>
+                <h1>Exames</h1>
                 <p>A ABS-Brasil oferece ampla gama de cursos do mundo do vinho. Seja para você, que é iniciante, ou para quem deseja se profissionalizar e entrar no mercado de trabalho.</p>
             </div>
             <div class="cursosNA">

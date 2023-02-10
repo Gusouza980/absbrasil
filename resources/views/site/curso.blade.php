@@ -520,9 +520,12 @@
                                     {{ $turma->local }}
                                 </div>
                                 <div class="row">
+                                    
                                     @if ($turma->aberto)
-                                        <img style="cursor: pointer" id="showterms"
+                                        <a href="https://abs-brasil.com/inscricao/pagamento">
+                                            <img style="cursor: pointer" id="showterms1"
                                             src="{{ asset('site/img/sistema/button_aulas-1.svg') }}">
+                                        </a>
                                     @else
                                         <button>Encerrado</button>
                                     @endif

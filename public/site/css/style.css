@@ -87,7 +87,7 @@ section.s_detail .container-fav .card-relative {
 section.s_detail .container-fav .card-area {
 	position: absolute;
 	height: calc(100vh + 200px);
-	top: -90px;
+	/* top: -90px; */
 	left: -18px;
 	width: 100%;
 	max-width: 300px;
@@ -1320,7 +1320,7 @@ div.termsBox {
 div.terms {
 	min-height: 480px;
 	width: 100%;
-	max-width: 800px;
+	max-width: 750px;
 	padding: 20px 40px;
 	background: white;
 	border-radius: 18px;
