@@ -1318,9 +1318,9 @@ div.termsBox {
 	display: none;
 }
 div.terms {
-	min-height: 800px;
+	min-height: 480px;
 	width: 100%;
-	max-width: 600px;
+	max-width: 800px;
 	padding: 20px 40px;
 	background: white;
 	border-radius: 18px;
